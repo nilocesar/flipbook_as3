@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<data>
+	<setup>
+		<start book="none"/>
+		<background src="background.jpg" type="image" resize="true"/>
+		<buttons toolTips="enabled">
+			<books toolTip="Show books" description="Choose a book" icon="icons/books.png"/>
+			<pages toolTip="Show all pages" description="Select page you wish to see" cancelText="Go back" state="enabled" icon="icons/pages.png"/>
+			<printer toolTip="Print pages"  description="Print your selection" cancelText="Go back" selectAll="Select All" state="enabled" icon="icons/printer.png"/>
+			<zoom toolTip="Zoom in" state="enabled" icon="icons/zoom.png"/>
+			<pdf toolTip="Download pdf version" description="Generate PDF" cancelText="Go back" selectAll="Select All" state="enabled" icon="icons/pdf.png"/>
+			<tableOfContent toolTip="View table of content" state="enabled" icon="icons/toc.png"/>
+			<contact toolTip="Contact me" state="enabled" icon="icons/contact.png"/>
+			<slideshow toolTip="Start/Stop slideshow" state="enabled" icon="icons/slideshow.png" />
+			<music toolTip="Play/Stop music" state="enabled" icon="icons/sound.png"/>
+			<full toolTip="Toggle full screen" state="enabled" icon="icons/full.png"/>
+			<tellAFriend toolTip="Tell a friend" state="enabled" icon="icons/tell.png"/>
+			<other bgColor="0xCCCCCC" bgAlpha="0.3"/>
+		</buttons>	
+	
+
+		<printer>
+			<alert delay="2000">
+				<started src="Printing started."/>
+				<canceled src="Printing canceled."/>
+			</alert>
+		</printer>
+		
+		<zoom>
+			<alert delay="2000">
+				<zoomIn src="Double click the screen to zoom out."/>
+				<zoomDisabled src="Zoom function is disabled for this book."/>
+			</alert>	
+		</zoom>	
+		
+		<slideshow autoPlay="false">
+			<alert delay="2000">
+				<on src="Slideshow started."/>
+				<off src="Slideshow stopped."/>
+			</alert>	
+		</slideshow>	
+		
+		<music>
+			<alert delay="2000">	
+				<on src="Please wait while the music is loading."/>
+				<off src="Music stopped."/>
+			</alert>	
+		</music>
+		
+		<preloading>
+			<background src="LOADING BACKGROUND"/>
+			<covers src="LOADING COVERS"/>
+			<book src="LOADING BOOK"/>
+			<photo src="LOADING BIGGER PHOTO"/>
+		</preloading>
+		
+		<!-- Contact setup: 
+				here you can setup your email, social icons, also the content that will be displayed on the page and the alerts -->	
+					
+		<contact email="gajkuba@gmail.com" toolTips="enabled">
+			<icons>
+				<twitter url="http://flashden.net/user/mpc" target="_blank" toolTip="Follow me on Twitter" state="enabled"/>
+				<facebook url="http://flashden.net/user/mpc" target="_blank" toolTip="Follow me on Facebook" state="enabled"/>
+				<website url="http://flashden.net/user/mpc" target="_blank" toolTip="Visit my blog" state="enabled"/>
+			</icons>
+			<text>
+				<title src="Contact massiveProCreation"/>
+				<content>
+					<![CDATA[
+email: xyz@xyz.xyz,
+phone: 111-222-333]]>
+				</content>
+				
+				<name src="Name"/>
+				<email src="Email"/>
+				<message src="Message"/>
+				<send src="Send"/>
+				<clear src="Clear"/>
+			</text>
+			<alert delay="2000">
+				<name src="Please input your name."/>
+				<email src="Please input your email."/>
+				<emailError src="Your email address is wrong!"/>
+				<message src="You haven't wrote any message."/>
+				<send src="Your email was sent."/>
+			</alert>		
+		</contact>
+		
+		<tellAFriend toolTips="enabled">
+			<text>
+				<title src="Send link to a friend."/>
+				<yourEmail src="Your Email"/>
+				<email src="Friends Email"/>
+				<message src="Message"/>
+				<send src="Send"/>
+				<clear src="Clear"/>
+			</text>
+			
+			<alert delay="2000">
+				<yourEmail src="Please input your email."/>
+				<email src="Please input friends emai.l"/>
+				<emailError src="Your email address is wrong!"/>
+				<message src="You haven't wrote any message."/>
+				<send src="Your email was sent."/>
+			</alert>		
+		</tellAFriend>
+
+		<pdf>
+			<setup method="generate" type="A5"/>
+			<alert delay="2000">
+				<generate src="Please wait while pdf is generating, you will be prompted with a 'save us' window."/>
+			</alert>
+		</pdf>		
+			
+		<copyrights src="Copyright (C) 2010, massiveProCreation" url="http://activeden.net/user/mpc?ref=mpc" target="_blank" state="enabled"/>
+		
+		<other>
+			<arrows state="enabled"/>
+		</other>
+				
+	</setup>
+	
+	<flipbook 
+		width="700" 
+		height="500" 
+		proportion="0" 
+		boarder="5" 
+		middleBoarder="0.5" 
+		boarderColor="0x000000" 
+		boarderAlpha="1" 
+		pdf="http://www.mpcreation.pl/flashden/flipbook/pdf_version.pdf" 
+		title="Features Book" 
+		bitmapSmoothing="true" 
+		doubleClick="true" 
+		resizeSwf="true" 
+		resizeContent="false"
+		resizeTableOfContent="false"
+		zoom="true">
+		
+		<alert delay="2000">
+			<loadingNext src="Please wait while the new page loads."/>
+			<loading src="Please wait while the page loads."/>
+			<pageNumber src="There are only 18 pages"/>
+			<video>
+				<enlarge src="Double Click to enlarge the video"/>
+				<close src="Double Click to close the video"/>
+				<preloading src="LOADING VIDEO"/>
+			</video>
+		</alert>
+		
+		<shadows>
+			<inner src="1"/>
+			<curveGlow src="1"/>
+			<pageShadow src="1"/>
+			<innerPageShadow src="1"/>
+		</shadows>	
+		
+		<music src="sound.mp3" autoPlay="false" loop="true"/>
+		<tableOfContent number="2"/>	
+		
+		<thumbnails>
+			<boarder thickness="5" color="0x111111"/>
+		</thumbnails>
+		
+		<page src="pages/cover.jpg" />
+		<page src="pages/table1.jpg"/>
+		<page src="pages/table2.jpg" type="table" bgColor="0xCCCCCC" bgAlpha="0.3" textColor="0x000000">
+			<list src="Table of Content"/>
+			<list src="Cover" number="1"/>
+			<list src="Content page" number="4"/>
+			<list src="Video support" number="6"/>
+			<list src="Amaizing Features" number="8"/>
+			<list src="Page Printing" number="10"/>
+			<list src="Great Design" number="12"/>
+			<list src="Swf support" number="14"/>
+			<list src="XML Driven" number="16"/>
+			<list src="Back Cover" number="18"/>
+		</page>	
+
+		<page src="pages/content1.jpg"/>
+		<page src="pages/content2.jpg" type="content" width="300" height="400">
+			<![CDATA[<img src="logo.png" align="left" />
+			
+			
+			
+			
+			
+			
+			
+			
+					
+<p>Welcome this is page with XML Driven content.
+
+<b>With deeplinking every page has it's own unique url so you can easily link to any spread you want!> <font color="#00FF00">(new feature)</font></b>	
+
+To format the text you can use bacis html tags like:
+
+<li><font size="13">Font size,</font></li>
+<li><font color="#00FF00">Font color,</font></li>
+<li><b>Bold,</b></li>
+<li><i>Italic,</i></li>
+<li><u>Underline,</u></li>
+<li>Image,</li>
+<li>Link: view my <a href="http://activeden.net/user/mpc?ref=mpc">ActiveDen profile.</a></li>
+</li></p>]]>
+		</page>	
+
+		<page src="pages/video1.jpg"/>
+		<page src="pages/video2.jpg" type="video" videoSrc="videos/organic.flv" duration="8.88" width="720" height="576"/>
+		<page src="pages/2_3.jpg" type="double" />
+		<page src="pages/4_5.jpg" type="double"/>
+		<page src="pages/6_7.jpg" type="double"/>								
+		<page src="pages/8.jpg"/>
+		<page src="pages/9.swf"/>
+		<page src="pages/10_11.jpg" type="double"/>
+		<page src="pages/bcover.jpg" />  
+	</flipbook>
+	
+	<flipbook 
+		width="0" 
+		height="0" 
+		proportion="0.7" 
+		boarder="10" 
+		middleBoarder="0.5" 
+		boarderColor="0x000000" 
+		boarderAlpha="1" 
+		pdf="http://www.mpcreation.pl/flashden/flipbook/pdf_version.pdf" 
+		title="Photography Book" 
+		bitmapSmoothing="true" 
+		doubleClick="true" 
+		resizeSwf="true" 
+		resizeContent="true"
+		resizeTableOfContent="true"
+		zoom="false">
+		
+		<alert>
+			<loadingNext src="Please wait while the new page loads."/>
+			<loading src="Please wait while the page loads."/>
+			<pageNumber src="There are only 18 pages"/>
+			<video>
+				<enlarge src="Double Click to enlarge the video"/>
+				<close src="Double Click to close the video"/>
+				<preloading src="LOADING VIDEO"/>
+			</video>
+		</alert>
+
+		<music src="sound.mp3" autoPlay="false" loop="true"/>
+		<tableOfContent number="2"/>	
+			
+		<shadows>
+			<inner src="0"/>
+			<curveGlow src="1"/>
+			<pageShadow src="1"/>
+			<innerPageShadow src="1"/>
+		</shadows>
+		
+		<thumbnails>
+			<boarder thickness="5" color="0x111111"/>
+		</thumbnails>
+		
+		<page src="pages/cover_album.jpg" />
+		<page src="pages/05_1.jpg" type="table" bgColor="0xCCCCCC" bgAlpha="0.3" textColor="0x000000">
+			<list src="Table of Content"/>
+			<list src="Cover" number="1"/>
+			<list src="Content page" number="2"/>
+			<list src="Field Photo" number="4"/>
+			<list src="Abstract Photo 1" number="6"/>
+			<list src="Abstract Photo 2" number="8"/>
+			<list src="Yellow Field" number="10"/>
+			<list src="Video" number="12"/>
+			<list src="Grand Canyon" number="14"/>
+			<list src="Lake" number="16"/>
+			<list src="Back Cover" number="18"/>
+		</page>
+			<page src="pages/05_2.jpg" type="content" width="300" height="450">
+				<![CDATA[
+	<p><font size="14"><b>If you want to see the list of features, please visit the Features Book</b>
+		
+		Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras pulvinar quam ac magna interdum elementum. Integer ac nisi eget dui faucibus iaculis. Etiam in mauris sed erat adipiscing pulvinar et quis libero. Quisque tincidunt massa at nisi convallis laoreet. Integer quis velit a odio faucibus commodo. Donec porta justo vitae urna egestas feugiat. Donec nec quam purus, non hendrerit sem. Aliquam erat volutpat. Integer eget sem accumsan ante fringilla dapibus a sed massa. Nulla venenatis justo at nibh volutpat id mollis mi pulvinar. Maecenas consectetur cursus nibh vel suscipit. Integer euismod elementum odio quis convallis. Duis lorem urna, varius venenatis semper a, gravida non turpis. Fusce facilisis porttitor augue eget ullamcorper. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer non nisi nec tortor consequat molestie.
+		
+		 Nulla venenatis justo at nibh volutpat id mollis mi pulvinar. Maecenas consectetur cursus nibh vel suscipit. Integer euismod elementum odio quis convallis. Duis lorem urna, varius venenatis semper a, gravida non turpis. Fusce facilisis porttitor augue eget ullamcorper. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer non nisi nec tortor consequat molestie.</font></p>]]>
+			</page>
+		<page src="pages/01.jpg" type="double"/>
+		<page src="pages/02.jpg" type="double"/>
+		<page src="pages/03.jpg" type="double"/>
+		<page src="pages/04.jpg" type="double"/>
+		<page src="pages/05_1.jpg"/>
+		<page src="pages/05_2.jpg" type="video" videoSrc="videos/organic.flv" duration="8.88" width="720" height="576"/>
+		<page src="pages/06.jpg" type="double"/>
+		<page src="pages/07.jpg" type="double"/>
+				
+		<page src="pages/bcover_album.jpg" />
+	</flipbook>
+	
+	<flipbook 
+		width="690" 
+		height="494" 
+		proportion="0" 
+		boarder="0" 
+		middleBoarder="0" 
+		boarderColor="0x000000" 
+		boarderAlpha="0" 
+		pdf="http://www.mpcreation.pl/flashden/flipbook/pdf_version.pdf" 
+		title="Sample Brochure" 
+		bitmapSmoothing="true" 
+		doubleClick="true" 
+		resizeSwf="true" 
+		resizeContent="false"
+		resizeTableOfContent="false"
+		zoom="true">
+		
+		<alert>
+			<loadingNext src="Please wait while the new page loads."/>
+			<loading src="Please wait while the page loads."/>
+			<pageNumber src="There are only 8 pages"/>
+			<video>
+				<enlarge src="Double Click to enlarge the video"/>
+				<close src="Double Click to close the video"/>
+				<preloading src="LOADING VIDEO"/>
+			</video>
+		</alert>
+		<music src="sound.mp3" autoPlay="false" loop="true"/>
+		<tableOfContent number="1"/>	
+		
+		<thumbnails>
+			<boarder thickness="0" color="0x111111"/>
+		</thumbnails>
+			
+		<shadows>
+			<inner src="1"/>
+			<curveGlow src="1"/>
+			<pageShadow src="1"/>
+			<innerPageShadow src="1"/>
+		</shadows>
+			
+		<page src="pages/brosure/front-cover_mini.jpg" large="pages/brosure/front-cover.jpg" />
+		<page src="pages/brosure/02_03_mini.jpg" large="pages/brosure/02_03.jpg" type="double" />
+		<page src="pages/brosure/04_mini.jpg" large="pages/brosure/04.jpg" />
+		<page src="pages/brosure/05_mini.jpg" large="pages/brosure/05.jpg" />
+		<page src="pages/brosure/06_mini.jpg" large="pages/brosure/06.jpg" />
+		<page src="pages/brosure/07_mini.jpg" large="pages/brosure/07.jpg" />
+		<page src="pages/brosure/back-cover_mini.jpg" large="pages/brosure/back-cover.jpg" />
+	</flipbook>
+</data>

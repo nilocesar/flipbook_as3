@@ -1,0 +1,971 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+	<head>
+	<title>XML Flip Book / AS3 | Help file</title>
+			<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+			<meta name="Description" content="Flash flip book is the best choice to present your portfolio or company folder. Take a closer look at our fully xml driven flip book. We have worked to ensure all your needs are fulfilled." />
+	<meta name="Keywords" content="flip book,flipbook, flipping book, page flip, pageflip, e-magazine, slide show, gallery, flash, as3, xml, actionscript, activeden, mpc, massiveprocreation, e-book, book, magazine, zoom, content, print, categories, music, vector, component, pdf, tool tip, swf, images, music, sound, volume control, slideshow" />
+			<meta http-equiv="Content-Language" content="en" />
+
+			<link rel="stylesheet" href="css/main.css" type="text/css" media="screen" />
+		
+	</head>
+	<body>
+		<div id="page">
+			<div id="header">
+				<div id="project">
+				<h1>XML Flip Book / AS3 - Help file</h1>
+				<h2>version 1.2</h2>
+                
+				</div>
+			</div>
+			
+			<div id="content">
+				<a href="http://activeden.net/item/xml-flip-book-as3/63869?ref=mpc" onclick="pageTracker._trackPageview('/image_prevew’);">
+				<img src="images/pic.jpg" alt="Flip Book project" /></a>
+				<p><em>Thank you for purchasing our file.</em>
+              <p>If you have upgraded to version 1.2 from a previous version, please take a look at the XML file. The structure is a little different. 
+                      
+<div class="line">massive pro creation</div>       
+				<p><h2>Table of Contents:</h2>
+                <ul>
+                  <strong><a href="#included">Included</a></strong> - a list of all the essential files and folders along with a short description for each one.
+            </ul>
+            <br />
+                <ul><strong><a href="#features">Product features overview:</a></strong>
+                	<li><a href="#features">Main features</a></li>
+                    <li><a href="#features_detail">Detailed features overview</a></li>
+                </ul>
+                <br />
+                <ul><strong><a href="#modify">How to use and modify the file:</a></strong>
+                	<li><a href="#modify_start">Start up</a></li>
+                    <li><a href="#modify_background">Background</a></li>
+                    <li><a href="#modify_top">Top navigation</a></li>
+                    <li><a href="#modify_alert">Alert messages</a></li>
+                    <li><a href="#modify_contact">Contact form</a></li>
+                    <li><a href="#modify_tell">Tell a friend</a></li>
+                    <li><a href="#modify_slideshow">Slide show</a></li>
+                    <li><a href="#modify_music">Music</a></li>
+                    <li><a href="#modify_copyright">Copyright footer</a></li>
+                    <li><a href="#modify_arrows">Arrows</a></li>
+                    <li><a href="#modify_preloading">Pre loading</a></li>
+                    <li><a href="#modify_title">Website title</a></li>
+                    <li><a href="#modify_xml">XML path</a></li>
+                    <li><a href="#modify_pdf">PDF generator</a></li>
+              </ul>
+                    <br />
+                <ul><strong><a href="#flipbook">Flip Book settings:</a></strong>
+                    <li><a href="#flipbook_basic">Basic setup</a></li>
+                    <li><a href="#flipbook_alerts">Alerts</a></li>
+                    <li><a href="#flipbook_shadows">Shadows</a></li>
+                    <li><a href="#flipbook_music">Music</a></li>
+                    <li><a href="#flipbook_table">Table of content</a></li>
+                    <li><a href="#flipbook_thumbnails">Thumbnails</a></li>
+                    <li><a href="#flipbook_adding">Adding and removing pages</a></li>
+                </ul>
+                    <br />
+                <ul><strong><a href="#good">Good to know:</a></strong>
+                	<li><a href="#good_xml">XML structure</a></li>
+                    <li><a href="#good_recompiling">Recompiling your file</a></li>
+                    <li><a href="#good_using">Using swiss as pages</a></li>
+                    <li><a href="#good_embeding">Embedding special characters</a></li>
+                    <li><a href="#good_content">Content pages</a></li>
+                </ul>
+			</p>  
+            
+             <div class="line">massive pro creation</div>
+		    <p><h2><a name="included">Included:</a></h2>
+<ul>
+<strong><em>org</em></strong> - the folder containing the set of classes called AlivePDF used to generate PDF files from the Flip Book
+</ul>
+			  <ul class="flash">
+			    <strong><em>preview.fla</em></strong> - the main file including the Flip Book and all the user interfaces
+</ul>
+					<ul>
+					  <em><strong>index.html</strong></em> - the wrapper HTML file
+        </ul>
+					<ul>
+					  <em><strong>setup.xml</strong></em> -  an XML file that lets you setup your Flip Books and all their features
+        </ul>
+					<ul>
+					  <em><strong>fonts</strong></em> - a folder containing the MyriadPro.swf file for the fonts that are used in the content page of the book
+        </ul>
+					<ul>
+					  <em><strong>pageContent.css</strong></em> - a CSS file for the styles used on the content page of the book
+        </ul>
+					<ul>
+					  <em><strong>logo.jpg</strong></em> - a massiveProCreation logo used on the content page to preview the loading of the images
+        </ul>
+					<ul><em><strong>video</strong></em> - a folder with the videos used in the preview and source files</ul>
+			  <ul>
+					  <p><em><strong>com</strong></em> -  a folder containing all the classes necessary for this Flip Book to work:					  </p>
+                      <li><em><strong>asual</strong></em> - a folder containing a set of classes called SWFAddress required for deep linking to work</li>
+                      <li><em><strong>greensock</strong></em> - a folder containing TweenMax, the tweening engine used for this item</li>
+					  <li><em><strong>massiveProCreation</strong></em> - a sub folder of com, containing:
+					    <ul>
+					    <em><strong>events</strong></em> - a folder containing the CustomEvents class used to call custom events</ul>
+					    <ul>
+					      <div align="left"><em><strong>flipbook</strong></em> - This folder contains the Flip Book classes, along with the UI classes:
+					      </div>
+					      <li>
+					        <div align="left"><em><strong>FlipBook.as</strong></em> - a class containing Flip Book's engine and is the necessary class for Flip Book to work</div>
+					      </li>
+					      <li>
+					        <div align="left"><em><strong>MainAS.as</strong></em> - a class containing all the UI events that also loads the background, sound and the Flip Book</div>
+					      </li>
+					      <li><em><strong>sound</strong></em> - a folder containing the SoundControl.as class to control sound in the Flip Book</li>
+					      <li><em><strong>ui</strong></em> - a folder containing all the user interface classes:
+					        <ul>
+					          <em><strong>AddPage.as</strong></em> - holds the button  used in the printer feature ("Add to print")
+					        </ul>
+					        <ul>
+					          <em><strong>Alert.as</strong></em> -  used to display the alerts on the screen
+					        </ul>
+					        <ul>
+					          <em><strong>BookTitle.as</strong></em> - allows the display of the book title above each cover in the category panel
+					        </ul>
+					        <ul>
+					          <div align="left"><em><strong>ChooseBook.as</strong></em> - holds the graphic button displayed in all of the scroll panels (shows all pages, printer, and categories)
+				              </div>
+					        </ul>
+					        <ul>
+					          <em><strong>Contact.as</strong></em> - holds the contact form along with its engine and social icons
+					        </ul>
+					        <ul>
+					          <em><strong>ControlPanel.as</strong></em> - setups all the buttons for the upper  navigation panel
+					        </ul>
+					        <ul>
+					          <em><strong>Copyright.as</strong></em> - used to display the footer copyright
+					        </ul>
+					        <ul>
+					          <em><strong>GoToPage.as</strong></em> - used to display the small go to page panel on the bottom left side of the book
+					        </ul>
+					        <ul>
+					          <em><strong>PageContent.as</strong></em> - used to display the HTML formatted text content on the page
+					        </ul>
+					        <ul>
+					          <em><strong>Scroll.as</strong></em> - allows the display of a small scroll bar used for slide show delay control and volume control
+					        </ul>
+					        <ul>
+					          <em><strong>ScrollPanel.as</strong></em> - holds the engine of a scroll panel that displays the preview of all the pages in the book (used for showing all pages, printer, and categories)
+					        </ul>
+					        <ul>
+					          <em><strong>TableOfContent.as</strong></em> - represents the table of content module implemented in the flip book
+					        </ul>
+					        <ul><em><strong>ToolTip.as</strong></em> - used to display tool tips on the screen </ul>
+				          </li>
+					      <li><em><strong>utils</strong></em> - contains three classes: the Reflect.as class that is used to create the reflection for each page in the preview, the XMLLoader.as class that allows loading of the XML file, and the VideoPlayer.as class that represents a simple Video Player component</li>
+				        </ul>
+				      </li>
+</ul>
+			  <ul>
+			    <em><strong>pages</strong></em> - contains images and SWFs for the gallery
+			  </ul>
+					<ul>
+					  <em><strong>contact_parse.php</strong></em> - contains the php function sending the e-mail. Place this on your server to enable your  <em>contact form</em>.
+              </ul>
+                    <ul>
+					  <em><strong>tell_parse.php</strong></em> - contains the php function sending the e-mail. Place this on your server to enable your <em>tell a friend form</em>.
+              </ul>
+			  <ul>
+			    <em><strong>create.php</strong></em> - used to generate PDFs for the book 
+            </ul>
+				</p>
+                
+			  <div class="line">massive pro creation</div>
+				
+                <p><h2><a name="features">Main Features:</a></h2>
+			  <ul>
+<strong>XML driven:</strong>
+					<li> flip books assets (images &amp; SWFs)</li>
+					<li> background – image or solid color</li>
+					<li> buttons and UI background colors and alpha</li>
+					<li> width and height of each book. You can also set the width and height to 0 and then the Flip Book will be automatically scaled to fit the browser!</li>
+					<li> bit map smoothing</li>
+					<li> alpha of each shadow</li>
+					<li> tool tips (enabled /disabled) and alert texts</li>
+					<li> all texts</li>
+					<li> table of contents</li>
+					<li> specifies the URL for each page. Clicking that page redirects to the specific URL.</li>
+					<li> contact form and social icons (enable/disable the icons)</li>
+					<li>enable / disable double click to turn the page</li>
+					<li> slides show (auto play)</li>
+					<li> music (path to sound file and auto play), separate mp3 for each book <em><strong>(new)</strong></em></li>
+					<li> ability to disable each of the features from the upper navigation menu</li>
+				</ul>
+                <br />
+			  <ul>
+			    multiple books (categories)
+			  </ul>
+       		  <ul>
+       		    <strong>deep linking</strong> - Each page and book have its separate URL. Also, the back / next arrows in the browser work! <em><strong>(new)</strong></em>
+       		  </ul>
+			  <ul>
+			    <strong>setup one image to display on both pages. You don't have to crop it!</strong> (Just change one parameter in XML file.)
+  </ul>
+					<ul>
+				    video support (FLV play back), livebox for video playback included <em><strong>(new)</strong></em>
+					</ul>
+<ul>
+  content pag - Format your content from XML file with CSS!
+</ul>
+                    <ul>
+                      page number                    
+                    </ul>
+                    <ul>
+                      SWF resize (enable / disable) -The SWF will be  sized to fit the page or will be centered on the page.
+                    </ul>
+                    <ul>
+                      full screen option
+                    </ul>
+              <ul>
+                      zoom option - You can disable the zoom for each book separately. Also you can provide bigger images to be loaded when user zooms the page <em><strong>(new)</strong></em>.
+              </ul>
+              <ul>double click to zoom <em><strong>(new)</strong></em></ul>
+                    <ul>contact form with social icons</ul>
+              <ul>
+                      slide show with dynamic delay
+              </ul>
+<ul>
+                    drag function for each book's corners
+                    </ul>
+              <ul>
+                      full book preview - Easily go through all pages.
+                    </ul>
+              <ul>
+                <div align="left">sizable content page and table of content - You can set this parameter in the XML. The content will be stretched to fit the page <em><strong>(new).</strong></em>
+                </div>
+              </ul>
+                    <ul>
+                    size to fit background - The background image will fit the screen to fill it.
+        </ul>
+                    <ul>
+                      improved see all pages panel with a scroll bar <em><strong>(new)</strong></em>
+</ul>
+                    <ul>
+                      All of the control buttons in upper panel are XML driven PNGs <em><strong>(new)</strong></em>.
+                    </ul>
+					<ul>
+					  SWF and image support
+					</ul>
+			  <ul>
+			    cool tool tips and alerts
+			  </ul>
+			  <ul>
+			    unlimited pages and categories
+			  </ul>
+					<ul>
+					  selected pages
+					printing
+					</ul>
+			  <ul>
+					downloading a flip book as a PDF option. You can prepare the PDF by your self and link it to the download PDF button  or turn on the automatic PDF generation. That way the user can choose the pages to see in the PDF.
+			  </ul>
+			  <ul>
+			    aesthetic  transparent design
+			  </ul>
+			  <ul>
+			    creative icons
+</ul>
+					<ul>advanced shading</ul>
+					<ul>smooth transitions and animations</ul>
+					<ul>
+					  classy pre loading
+					</ul>
+			  <ul>
+			    ActionScript 3.0
+			  </ul>
+				  <ul>
+				    <div align="left">detailed help file with images included </div>
+				  </ul>
+			    <div align="left">
+				    </p>
+				    
+		      </div>
+			  <div class="line">massive pro creation</div>
+				
+<p><h2><a name="features_detail">Detailed Features Overview:</a></h2>
+				Each feature can be disabled in the XML. For example, if the print option is not needed, you can easily disable it in the XML file.
+</p>
+				<p>
+<ul>
+					  <strong>Books/Categories</strong> – This feature is automatically enabled when there is more than one Flip Book. For each of the Flip Books there is a title filed which specifies the title of the book. The categories panel is scrollable so it can contain an unlimited number of books.
+</ul>
+					<ul><strong>View all pages</strong> – This feature enables the user to easily view all the pages that are in the Flip Book, allowing the user to choose any page for viewing.</ul>
+			  <ul>
+			    <strong>Zoom</strong> – The zoom option enables the user to zoom the flip book. After zooming,  the alert is displayed (text for the alert is XML driven).
+			  </ul>
+					<ul>
+					  <strong>Printer</strong> – The print option lets the user print selected pages. After clicking <strong>print the image</strong> from the Flip Book, the pages are sent to the printer.
+					</ul>
+<ul>
+					  <strong>Download  PDF </strong> – The user can download Flip Book as a PDF (The PDF is driven from an URL so the PDF has to be prepared manually.)
+					</ul>
+					<ul>
+					  <strong>Slideshow</strong> –The slides how has the dynamic speed control. Also, there is the ability to set it to auto play when the book starts.
+</ul>
+					<ul>
+					  <strong>Music</strong> – The sound controls are Stop/Pause (mp3 linked from URL) and dynamic volume control. Also there is an option to set the auto play of music.
+					</ul>
+					<ul>
+					  <strong>Contact Form</strong> – Text and alert messages are easily set in the contact form. Also, you can disable or enable the social icons in the Contact Form. (This form uses PHP. It doesn't work on FlashDen server, but it will work on any other server.).
+					</ul>
+</p>
+<div class="line">massive pro creation</div>
+			<p><h2><a name="modify">How to use and modify this file:</a></h2>		
+            
+            To modify the basic settings of this product, open the <em>setup.xml</em> file. There you can customize all of the application features. Remember to save the file after making changes; otherwise, you will not see any changes.
+            </p>
+            The XML file is  a setting file for the application, so any changes you make to the file will be reflected in the application.  Upon opening, Flip Book  reads the data inside the XML file and builds the application the way it is described in the XML file. <br/>
+            <br/>
+            <p><strong><u><a name="modify_start">Start-up Settings</a></u></strong>
+            <pre style='color:#000020;background:#f6f8ff;'><br /><span style='color:#0057a6; '>&lt;</span><span style='color:#333385; '>start</span> <span style='color:#474796; '>book</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"</span><span style='color:#1060b6; '>none</span><span style='color:#1060b6; '>"</span><span style='color:#0057a6; '>/></span>
+<br /></pre>
+In <em>start</em> tag you can specify the book to open first. If you choose none, the application will start from a "choose book" screen. If you have less than two books, the application will automatically start from displaying the only book.
+            </p>	
+            <br />
+            <br />
+            <p><strong><u><a name="modify_background">Background Settings</a></u></strong>
+            <pre style='color:#000020;background:#f6f8ff;'><br /><span style='color:#0057a6; '>&lt;</span><span style='color:#333385; '>background</span> <span style='color:#474796; '>src</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"</span><span style='color:#1060b6; '>background.jpg</span><span style='color:#1060b6; '>"</span> <span style='color:#474796; '>type</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"</span><span style='color:#1060b6; '>image</span><span style='color:#1060b6; '>"</span> <span style='color:#474796; '>resize</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"</span><span style='color:#1060b6; '>false</span><span style='color:#1060b6; '>"</span><span style='color:#0057a6; '>/></span>
+            </pre>
+            <em>Background</em> settings has 3 attributes:
+<ul>
+<strong>src</strong> - Here you input the path to your background image or the hexadecimal color value for a solid background (0x000000 - for black)
+</ul>
+<ul>
+<strong>type</strong> - You can choose between two types or background: <em>image</em> or <em>solid</em>.
+</ul>
+<ul>
+  <strong>resize</strong> - This attribute is a boolean value (true or false). It  specifies if your background (only when you use image as a background) will be resized to fit the user's screen resolution or not.
+</ul></p>		
+<br/>
+            <p><strong><u><a name="modify_top">Top Navigation</a></u></strong></p>
+            <p>
+            <img src="images/cp.jpg" alt="Controls Panel" />
+The Control Panel section contains 11 different button settings. In the main <em>buttons</em> tag there is an attribute called <em>toolTips</em>. This is a boolean attribute which specifies if the tool tip should be shown after the user rolls over the button.  Each of the buttons (books, page, printer, etc.) contains  common attributes like:
+            <ul>
+              <strong>toolTip</strong> - specifies text that will be displayed when user hovers the specific button</ul>
+<ul>
+  <strong>state</strong> - state attribute can be set to disabled or enabled. If you don't need some of the options, you can disable them. That way the buttons will not be shown in the upper bar and will not be available for use.
+</ul>
+<ul>
+  <strong>icon </strong>-  specifies the path to the icon that will be displayed as a button
+</ul></p>
+
+<br />
+<u>Button differences and attributes' descriptions:		</u>
+<ul>
+  <strong>books</strong> - This node doesn't have the <em>state</em> attribute like all the others because when there is one book, it will be automatically disabled. In addition, the <em>books</em> node has an attribute called <em>description</em> which specifies the text that will be displayed at the top of "Choose Book" panel.
+</ul>
+<ul>
+  <strong>pages</strong> - Contains two additional attributes: <em>description</em> and <em>cancelText</em>. Both of them define the text that will be displayed in the upper part of <em>Show all pages</em> panel.
+</ul>
+<ul>
+  <strong>printer</strong> - Contains 3 additional attributes : <em>description</em>, <em>cancelText</em>, and <em>selectAll</em>. All of those attributes specify the text that will be displayed on each of those buttons.
+</ul>
+<ul>
+  <strong>zoom</strong> - no  additional attributes
+</ul>
+<ul>
+  <strong>PDF</strong> - Contains the same parameters as <em>printer</em> node.
+</ul>
+<ul>
+  <strong>tableOfContent</strong> - no additional parameters
+</ul>
+<ul>
+  <strong>contact</strong> -  no additional parameters
+</ul>
+<ul>
+  <strong>Slideshow</strong> - no additional parameters.</ul>
+<ul>
+  <strong>full</strong> - no additional parameters
+</ul>
+<ul>
+  <strong>other</strong> - Represents the background color and background alpha for other buttons in this application. For example, when you go to the print panel, there is a <em>Go Back</em> button; or when you hover the "slide show" button, the scroll bar shows up to control its speed. The attributes of <em>the other</em> node specify the look of those buttons.
+</ul>
+</p>
+
+<pre style='color:#000020;background:#f6f8ff;'><span style='color:#0057a6; '>&lt;</span><span style='color:#333385; '>buttons</span> <span style='color:#474796; '>toolTips</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"</span><span style='color:#1060b6; '>enabled</span><span style='color:#1060b6; '>"</span><span style='color:#0057a6; '>></span>
+    <span style='color:#0057a6; '>&lt;</span><span style='color:#333385; '>books</span> <span style='color:#474796; '>toolTip</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"</span><span style='color:#1060b6; '>Show books</span><span style='color:#1060b6; '>"</span> <span style='color:#474796; '>description</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"</span><span style='color:#1060b6; '>Choose a book</span><span style='color:#1060b6; '>"</span> <span style='color:#474796; '>icon</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"</span><span style='color:#1060b6; '>icons/books.png</span><span style='color:#1060b6; '>"</span><span style='color:#0057a6; '>/></span>
+    <span style='color:#0057a6; '>&lt;</span><span style='color:#333385; '>pages</span> <span style='color:#474796; '>toolTip</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"</span><span style='color:#1060b6; '>Show all pages</span><span style='color:#1060b6; '>"</span> <span style='color:#474796; '>description</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"</span><span style='color:#1060b6; '>Select page you wish to see</span><span style='color:#1060b6; '>"</span> 
+        <span style='color:#474796; '>cancelText</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"</span><span style='color:#1060b6; '>Go back</span><span style='color:#1060b6; '>"</span> <span style='color:#474796; '>state</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"</span><span style='color:#1060b6; '>enabled</span><span style='color:#1060b6; '>"</span> <span style='color:#474796; '>icon</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"</span><span style='color:#1060b6; '>icons/pages.png</span><span style='color:#1060b6; '>"</span><span style='color:#0057a6; '>/></span>
+    <span style='color:#0057a6; '>&lt;</span><span style='color:#333385; '>printer</span> <span style='color:#474796; '>toolTip</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"</span><span style='color:#1060b6; '>Print pages</span><span style='color:#1060b6; '>"</span>  <span style='color:#474796; '>description</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"</span><span style='color:#1060b6; '>Print your selection</span><span style='color:#1060b6; '>"</span> 
+        <span style='color:#474796; '>cancelText</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"</span><span style='color:#1060b6; '>Go back</span><span style='color:#1060b6; '>"</span> <span style='color:#474796; '>state</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"</span><span style='color:#1060b6; '>enabled</span><span style='color:#1060b6; '>"</span> <span style='color:#474796; '>icon</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"</span><span style='color:#1060b6; '>icons/printer.png</span><span style='color:#1060b6; '>"</span><span style='color:#0057a6; '>/></span>
+    <span style='color:#0057a6; '>&lt;</span><span style='color:#333385; '>zoom</span> <span style='color:#474796; '>toolTip</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"</span><span style='color:#1060b6; '>Zoom in</span><span style='color:#1060b6; '>"</span> <span style='color:#474796; '>state</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"</span><span style='color:#1060b6; '>enabled</span><span style='color:#1060b6; '>"</span> <span style='color:#474796; '>icon</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"</span><span style='color:#1060b6; '>icons/zoom.png</span><span style='color:#1060b6; '>"</span><span style='color:#0057a6; '>/></span>
+    <span style='color:#0057a6; '>&lt;</span><span style='color:#333385; '>pdf</span> <span style='color:#474796; '>toolTip</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"</span><span style='color:#1060b6; '>Download pdf version</span><span style='color:#1060b6; '>"</span> <span style='color:#474796; '>description</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"</span><span style='color:#1060b6; '>Generate PDF</span><span style='color:#1060b6; '>"</span> 
+        <span style='color:#474796; '>cancelText</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"</span><span style='color:#1060b6; '>Go back</span><span style='color:#1060b6; '>"</span> <span style='color:#474796; '>state</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"</span><span style='color:#1060b6; '>enabled</span><span style='color:#1060b6; '>"</span> <span style='color:#474796; '>icon</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"</span><span style='color:#1060b6; '>icons/pdf.png</span><span style='color:#1060b6; '>"</span><span style='color:#0057a6; '>/></span>
+    <span style='color:#0057a6; '>&lt;</span><span style='color:#333385; '>tableOfContent</span> <span style='color:#474796; '>toolTip</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"</span><span style='color:#1060b6; '>View table of content</span><span style='color:#1060b6; '>"</span> <span style='color:#474796; '>state</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"</span><span style='color:#1060b6; '>enabled</span><span style='color:#1060b6; '>"</span> 
+        <span style='color:#474796; '>icon</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"</span><span style='color:#1060b6; '>icons/toc.png</span><span style='color:#1060b6; '>"</span><span style='color:#0057a6; '>/></span>
+    <span style='color:#0057a6; '>&lt;</span><span style='color:#333385; '>contact</span> <span style='color:#474796; '>toolTip</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"</span><span style='color:#1060b6; '>Contact me</span><span style='color:#1060b6; '>"</span> <span style='color:#474796; '>state</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"</span><span style='color:#1060b6; '>enabled</span><span style='color:#1060b6; '>"</span> <span style='color:#474796; '>icon</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"</span><span style='color:#1060b6; '>icons/contact.png</span><span style='color:#1060b6; '>"</span><span style='color:#0057a6; '>/></span>
+    <span style='color:#0057a6; '>&lt;</span><span style='color:#333385; '>slideshow</span> <span style='color:#474796; '>toolTip</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"</span><span style='color:#1060b6; '>Start/Stop slideshow</span><span style='color:#1060b6; '>"</span> <span style='color:#474796; '>state</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"</span><span style='color:#1060b6; '>enabled</span><span style='color:#1060b6; '>"</span> 
+        <span style='color:#474796; '>icon</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"</span><span style='color:#1060b6; '>icons/slideshow.png</span><span style='color:#1060b6; '>"</span><span style='color:#0057a6; '>/></span>
+    <span style='color:#0057a6; '>&lt;</span><span style='color:#333385; '>music</span> <span style='color:#474796; '>toolTip</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"</span><span style='color:#1060b6; '>Play/Stop music</span><span style='color:#1060b6; '>"</span> <span style='color:#474796; '>state</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"</span><span style='color:#1060b6; '>enabled</span><span style='color:#1060b6; '>"</span> <span style='color:#474796; '>icon</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"</span><span style='color:#1060b6; '>icons/sound.png</span><span style='color:#1060b6; '>"</span><span style='color:#0057a6; '>/></span>
+    <span style='color:#0057a6; '>&lt;</span><span style='color:#333385; '>full</span> <span style='color:#474796; '>toolTip</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"</span><span style='color:#1060b6; '>Toggle full screen</span><span style='color:#1060b6; '>"</span> <span style='color:#474796; '>state</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"</span><span style='color:#1060b6; '>enabled</span><span style='color:#1060b6; '>"</span> <span style='color:#474796; '>icon</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"</span><span style='color:#1060b6; '>icons/full.png</span><span style='color:#1060b6; '>"</span><span style='color:#0057a6; '>/></span>
+    <span style='color:#0057a6; '>&lt;</span><span style='color:#333385; '>other</span> <span style='color:#474796; '>bgColor</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"</span><span style='color:#1060b6; '>0xCCCCCC</span><span style='color:#1060b6; '>"</span> <span style='color:#474796; '>bgAlpha</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"</span><span style='color:#1060b6; '>0.3</span><span style='color:#1060b6; '>"</span><span style='color:#0057a6; '>/></span>
+<span style='color:#0057a6; '>&lt;/</span><span style='color:#333385; '>buttons</span><span style='color:#0057a6; '>></span>
+</pre>
+<p><strong>NOTE:</strong> The XML file must have <strong><em>a data</em></strong> tag at the beginning and <em><strong>/data</strong></em> at the end of the file. In other words all of the informations in the XML file must  be wrapped in the <em><strong>data</strong></em> tags!
+</p>
+
+<br />
+<p><strong><u><a name="modify_alert">Alert Messages</a></u></strong></p>
+            <p>
+            <center><img src="images/alert.jpg" alt="Alert message" />        </center>
+
+<p>When you want an alert message, you need to look for the <em>alert</em> tag in the XML file. Each alert message can be edited from the XML as you can see in the following XML example. Each alert has two parameters:
+<ul>
+  <strong>delay</strong> - specifies how long  the alert will be shown;  time is represented in milliseconds (1000 = 1 second)
+</ul>
+<ul>
+  <strong>src</strong> -  specifies  text that will be shown on the screen, for example, "Printing started"
+</ul>
+</p>
+
+        <pre style='color:#000020;background:#f6f8ff;'><span style='color:#0057a6; '>&lt;</span><span style='color:#333385; '>printer</span><span style='color:#0057a6; '>></span>
+    <span style='color:#0057a6; '>&lt;</span><span style='color:#333385; '>alert</span> <span style='color:#474796; '>delay</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"</span><span style='color:#1060b6; '>2000</span><span style='color:#1060b6; '>"</span><span style='color:#0057a6; '>></span>
+        <span style='color:#0057a6; '>&lt;</span><span style='color:#333385; '>started</span> <span style='color:#474796; '>src</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"</span><span style='color:#1060b6; '>Printing started</span><span style='color:#1060b6; '>"</span><span style='color:#0057a6; '>/></span>
+        <span style='color:#0057a6; '>&lt;</span><span style='color:#333385; '>canceled</span> <span style='color:#474796; '>src</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"</span><span style='color:#1060b6; '>Printing canceled</span><span style='color:#1060b6; '>"</span><span style='color:#0057a6; '>/></span>
+    <span style='color:#0057a6; '>&lt;/</span><span style='color:#333385; '>alert</span><span style='color:#0057a6; '>></span>
+<span style='color:#0057a6; '>&lt;/</span><span style='color:#333385; '>printer</span><span style='color:#0057a6; '>></span>
+        
+    <span style='color:#0057a6; '>&lt;</span><span style='color:#333385; '>zoom</span><span style='color:#0057a6; '>></span>
+        <span style='color:#0057a6; '>&lt;</span><span style='color:#333385; '>alert</span> <span style='color:#474796; '>delay</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"</span><span style='color:#1060b6; '>2000</span><span style='color:#1060b6; '>"</span><span style='color:#0057a6; '>></span>
+            <span style='color:#0057a6; '>&lt;</span><span style='color:#333385; '>zoomIn</span> <span style='color:#474796; '>src</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"</span><span style='color:#1060b6; '>Click the screen to zoom out</span><span style='color:#1060b6; '>"</span><span style='color:#0057a6; '>/></span>
+        <span style='color:#0057a6; '>&lt;/</span><span style='color:#333385; '>alert</span><span style='color:#0057a6; '>></span>    
+    <span style='color:#0057a6; '>&lt;/</span><span style='color:#333385; '>zoom</span><span style='color:#0057a6; '>></span>
+</pre>
+        
+ <p><strong><u><a name="modify_contact">Contact Form</a></u></strong></p>
+           
+ <img src="images/contact.png" alt="Contact form" />
+ <p>The contact section has many settings. At first it may look complicated, but it's really easy. 
+ The main <em>contact</em> tag contains two attributes:
+ <ul>
+   <strong>email</strong> - Here you should input your e-mail address. The e-mail sent from your flip book will be sent to that e-mail.
+ </ul>
+ <ul>
+   <div align="left"><strong>toolTips</strong> - As previously explained, this is an enabled / disabled attribute that specifies whether the tool tips will be shown in this section or not.
+   </div>
+ </ul>
+ Next is the <em>icons</em> section. This section lets you specify the social icons you want to display below  the contact form. Included are Twitter, Facebook, and your own website (blog or portfolio). Each of these social icons has 4 attributes:
+ <ul>
+   <strong>url</strong> - specifies the URL the  user will be redirected to after clicking the icon
+ </ul>
+ <ul>
+   <strong>target</strong> -  Choose between  two targets: <em>_self</em> - an URL will open in the same window or <em>_blank</em> - the URL will open in a new window. There is also a third one called <em>_frame</em>).
+ </ul>
+ <ul>
+ <strong>toolTip</strong> -specifies the message to display in the tool tip
+ </ul>
+ <ul>
+   <strong>state</strong> - As covered previously, the state (enabled/disabled) specifies if the icon will be shown.
+ </ul>
+ The Text section defines all the text/descriptions in the contact form:
+ <ul>
+   <strong>title</strong> - This attribute specifies the title that is displayed at the top of contact form.
+ </ul>
+ <ul>
+ <strong>content</strong> - Below the title there is a place for a few lines of  text where you can put your other contact info like telephone, address, etc.
+ </ul>
+ <ul>
+   <strong>name</strong> -  first input field label
+ </ul>
+ <ul>
+   <strong>email</strong> - second input field label
+ </ul>
+ <ul>
+   <strong>message</strong> -  third input field
+ label
+ </ul>
+ <ul>
+   <strong>send</strong> -  right button
+ label
+ </ul>
+ <ul>
+   <strong>clear</strong> -  left button label
+ </ul>
+ The last section of <em>contact</em> node contains 5 possible alert settings. Also, as explained earlier, there is a delay parameter. If you need more explanation, please see the "<a href="#modify_alert">Alert messages</a>" section.
+ </p>    
+  <pre style='color:#000020;background:#f6f8ff;'><span style='color:#0057a6; '>&lt;</span><span style='color:#333385; '>contact</span> <span style='color:#474796; '>email</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"</span><span style='color:#1060b6; '>gajkuba@gmail.com</span><span style='color:#1060b6; '>"</span> <span style='color:#474796; '>toolTips</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"</span><span style='color:#1060b6; '>enabled</span><span style='color:#1060b6; '>"</span><span style='color:#0057a6; '>></span>
+    <span style='color:#0057a6; '>&lt;</span><span style='color:#333385; '>icons</span><span style='color:#0057a6; '>></span>
+        <span style='color:#0057a6; '>&lt;</span><span style='color:#333385; '>twitter</span> <span style='color:#474796; '>url</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"</span><span style='color:#1060b6; '>http://flashden.net/user/mpc</span><span style='color:#1060b6; '>"</span> 
+        <span style='color:#474796; '>target</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"</span><span style='color:#1060b6; '>_blank</span><span style='color:#1060b6; '>"</span> <span style='color:#474796; '>toolTip</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"</span><span style='color:#1060b6; '>Follow me on Twitter</span><span style='color:#1060b6; '>"</span> <span style='color:#474796; '>state</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"</span><span style='color:#1060b6; '>enabled</span><span style='color:#1060b6; '>"</span><span style='color:#0057a6; '>/></span>
+        <span style='color:#0057a6; '>&lt;</span><span style='color:#333385; '>facebook</span> <span style='color:#474796; '>url</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"</span><span style='color:#1060b6; '>http://flashden.net/user/mpc</span><span style='color:#1060b6; '>"</span> 
+        <span style='color:#474796; '>target</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"</span><span style='color:#1060b6; '>_blank</span><span style='color:#1060b6; '>"</span> <span style='color:#474796; '>toolTip</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"</span><span style='color:#1060b6; '>Follow me on Facebook</span><span style='color:#1060b6; '>"</span> <span style='color:#474796; '>state</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"</span><span style='color:#1060b6; '>enabled</span><span style='color:#1060b6; '>"</span><span style='color:#0057a6; '>/></span>
+        <span style='color:#0057a6; '>&lt;</span><span style='color:#333385; '>website</span> <span style='color:#474796; '>url</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"</span><span style='color:#1060b6; '>http://flashden.net/user/mpc</span><span style='color:#1060b6; '>"</span> 
+        <span style='color:#474796; '>target</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"</span><span style='color:#1060b6; '>_blank</span><span style='color:#1060b6; '>"</span> <span style='color:#474796; '>toolTip</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"</span><span style='color:#1060b6; '>Visit my blog</span><span style='color:#1060b6; '>"</span> <span style='color:#474796; '>state</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"</span><span style='color:#1060b6; '>enabled</span><span style='color:#1060b6; '>"</span><span style='color:#0057a6; '>/></span>
+    <span style='color:#0057a6; '>&lt;/</span><span style='color:#333385; '>icons</span><span style='color:#0057a6; '>></span>
+    <span style='color:#0057a6; '>&lt;</span><span style='color:#333385; '>text</span><span style='color:#0057a6; '>></span>
+        <span style='color:#0057a6; '>&lt;</span><span style='color:#333385; '>title</span> <span style='color:#474796; '>src</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"</span><span style='color:#1060b6; '>Contact massiveProCreation</span><span style='color:#1060b6; '>"</span><span style='color:#0057a6; '>/></span>
+        <span style='color:#0057a6; '>&lt;</span><span style='color:#333385; '>content</span><span style='color:#0057a6; '>></span>
+            <span style='color:#606090; '>&lt;![CDATA[</span>
+                        email: xyz@xyz.xyz,
+                        phone: 111-222-333<span style='color:#606090; '>]]&gt;</span>
+        <span style='color:#0057a6; '>&lt;/</span><span style='color:#333385; '>content</span><span style='color:#0057a6; '>></span>    
+        <span style='color:#0057a6; '>&lt;</span><span style='color:#333385; '>name</span> <span style='color:#474796; '>src</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"</span><span style='color:#1060b6; '>Name</span><span style='color:#1060b6; '>"</span><span style='color:#0057a6; '>/></span>
+        <span style='color:#0057a6; '>&lt;</span><span style='color:#333385; '>email</span> <span style='color:#474796; '>src</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"</span><span style='color:#1060b6; '>Email</span><span style='color:#1060b6; '>"</span><span style='color:#0057a6; '>/></span>
+        <span style='color:#0057a6; '>&lt;</span><span style='color:#333385; '>message</span> <span style='color:#474796; '>src</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"</span><span style='color:#1060b6; '>Message</span><span style='color:#1060b6; '>"</span><span style='color:#0057a6; '>/></span>
+        <span style='color:#0057a6; '>&lt;</span><span style='color:#333385; '>send</span> <span style='color:#474796; '>src</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"</span><span style='color:#1060b6; '>Send</span><span style='color:#1060b6; '>"</span><span style='color:#0057a6; '>/></span>
+        <span style='color:#0057a6; '>&lt;</span><span style='color:#333385; '>clear</span> <span style='color:#474796; '>src</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"</span><span style='color:#1060b6; '>Clear</span><span style='color:#1060b6; '>"</span><span style='color:#0057a6; '>/></span>
+    <span style='color:#0057a6; '>&lt;/</span><span style='color:#333385; '>text</span><span style='color:#0057a6; '>></span>
+    <span style='color:#0057a6; '>&lt;</span><span style='color:#333385; '>alert</span> <span style='color:#474796; '>delay</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"</span><span style='color:#1060b6; '>2000</span><span style='color:#1060b6; '>"</span><span style='color:#0057a6; '>></span>
+        <span style='color:#0057a6; '>&lt;</span><span style='color:#333385; '>name</span> <span style='color:#474796; '>src</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"</span><span style='color:#1060b6; '>Please input your name</span><span style='color:#1060b6; '>"</span><span style='color:#0057a6; '>/></span>
+        <span style='color:#0057a6; '>&lt;</span><span style='color:#333385; '>email</span> <span style='color:#474796; '>src</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"</span><span style='color:#1060b6; '>Please input your email</span><span style='color:#1060b6; '>"</span><span style='color:#0057a6; '>/></span>
+        <span style='color:#0057a6; '>&lt;</span><span style='color:#333385; '>emailError</span> <span style='color:#474796; '>src</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"</span><span style='color:#1060b6; '>Your email address is wrong!</span><span style='color:#1060b6; '>"</span><span style='color:#0057a6; '>/></span>
+        <span style='color:#0057a6; '>&lt;</span><span style='color:#333385; '>message</span> <span style='color:#474796; '>src</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"</span><span style='color:#1060b6; '>You haven't wrote any message</span><span style='color:#1060b6; '>"</span><span style='color:#0057a6; '>/></span>
+        <span style='color:#0057a6; '>&lt;</span><span style='color:#333385; '>send</span> <span style='color:#474796; '>src</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"</span><span style='color:#1060b6; '>This option doesn't work in...</span><span style='color:#1060b6; '>"</span><span style='color:#0057a6; '>/></span>
+    <span style='color:#0057a6; '>&lt;/</span><span style='color:#333385; '>alert</span><span style='color:#0057a6; '>></span>        
+<span style='color:#0057a6; '>&lt;/</span><span style='color:#333385; '>contact</span><span style='color:#0057a6; '>></span>
+</pre>      
+  
+  <p><strong><u><a name="modify_tell">Tell a Friend</a></u></strong></p>
+  
+  <img src="images/tell.png" alt="Tell a friend form" />
+  <br/>
+  <strong>Tell a friend</strong> is a useful feature that allows the user to send a page link to a friend. For example, if the user likes a whole page or only a single video in the book, it can be e-mailed to a friend. Also, the link will be automatically added to the message. <strong>Tell a friend</strong> settings are  similar to those from the contact form. The main <em>tellAFriend</em> tag contains one attribute:
+  <ul>
+    <strong>toolTip</strong> - As in any other module, it gives  the ability to disable / enable tool tips for this section.
+  </ul>
+  <ul>
+    <strong>text</strong> - This node contains 6 sub nodes which define the info displayed in the <strong>tell a friend</strong> form:
+<li><strong>title</strong> -  specifies the title that is displayed at the top of tell a friend form</li>
+ <li><strong>yourEmail</strong> -  first input field label</li>
+ <li><strong>email</strong> - second input field label</li>
+ <li><strong>message</strong> - third input field label</li>
+ <li><strong>send</strong> - right button label</li>
+ <li><strong>clear</strong> -  left button label</li></ul>
+  The last section of the <em>tellAFriend</em> node contains alert settings. There are 5 alert messages that can be specified. Also, as explained earlier, there is a <em>delay</em> parameter. If you need more explanation, please see the "<a href="#modify_alert">Alert messages</a>" section.
+  
+  <pre style='color:#000020;background:#f6f8ff;'><span style='color:#0057a6; '>&lt;</span><span style='color:#333385; '>tellAFriend</span> <span style='color:#474796; '>toolTips</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"</span><span style='color:#1060b6; '>enabled</span><span style='color:#1060b6; '>"</span><span style='color:#0057a6; '>></span>
+    <span style='color:#0057a6; '>&lt;</span><span style='color:#333385; '>text</span><span style='color:#0057a6; '>></span>
+        <span style='color:#0057a6; '>&lt;</span><span style='color:#333385; '>title</span> <span style='color:#474796; '>src</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"</span><span style='color:#1060b6; '>Send link to a friend</span><span style='color:#1060b6; '>"</span><span style='color:#0057a6; '>/></span>
+        <span style='color:#0057a6; '>&lt;</span><span style='color:#333385; '>yourEmail</span> <span style='color:#474796; '>src</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"</span><span style='color:#1060b6; '>Your Email</span><span style='color:#1060b6; '>"</span><span style='color:#0057a6; '>/></span>
+        <span style='color:#0057a6; '>&lt;</span><span style='color:#333385; '>email</span> <span style='color:#474796; '>src</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"</span><span style='color:#1060b6; '>Friends Email</span><span style='color:#1060b6; '>"</span><span style='color:#0057a6; '>/></span>
+        <span style='color:#0057a6; '>&lt;</span><span style='color:#333385; '>message</span> <span style='color:#474796; '>src</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"</span><span style='color:#1060b6; '>Message</span><span style='color:#1060b6; '>"</span><span style='color:#0057a6; '>/></span>
+        <span style='color:#0057a6; '>&lt;</span><span style='color:#333385; '>send</span> <span style='color:#474796; '>src</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"</span><span style='color:#1060b6; '>Send</span><span style='color:#1060b6; '>"</span><span style='color:#0057a6; '>/></span>
+        <span style='color:#0057a6; '>&lt;</span><span style='color:#333385; '>clear</span> <span style='color:#474796; '>src</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"</span><span style='color:#1060b6; '>Clear</span><span style='color:#1060b6; '>"</span><span style='color:#0057a6; '>/></span>
+    <span style='color:#0057a6; '>&lt;/</span><span style='color:#333385; '>text</span><span style='color:#0057a6; '>></span>
+            
+    <span style='color:#0057a6; '>&lt;</span><span style='color:#333385; '>alert</span> <span style='color:#474796; '>delay</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"</span><span style='color:#1060b6; '>2000</span><span style='color:#1060b6; '>"</span><span style='color:#0057a6; '>></span>
+        <span style='color:#0057a6; '>&lt;</span><span style='color:#333385; '>yourEmail</span> <span style='color:#474796; '>src</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"</span><span style='color:#1060b6; '>Please input your email</span><span style='color:#1060b6; '>"</span><span style='color:#0057a6; '>/></span>
+        <span style='color:#0057a6; '>&lt;</span><span style='color:#333385; '>email</span> <span style='color:#474796; '>src</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"</span><span style='color:#1060b6; '>Please input friends email</span><span style='color:#1060b6; '>"</span><span style='color:#0057a6; '>/></span>
+        <span style='color:#0057a6; '>&lt;</span><span style='color:#333385; '>emailError</span> <span style='color:#474796; '>src</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"</span><span style='color:#1060b6; '>Your email address is wrong!</span><span style='color:#1060b6; '>"</span><span style='color:#0057a6; '>/></span>
+        <span style='color:#0057a6; '>&lt;</span><span style='color:#333385; '>message</span> <span style='color:#474796; '>src</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"</span><span style='color:#1060b6; '>You haven't wrote any message</span><span style='color:#1060b6; '>"</span><span style='color:#0057a6; '>/></span>
+        <span style='color:#0057a6; '>&lt;</span><span style='color:#333385; '>send</span> <span style='color:#474796; '>src</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"</span><span style='color:#1060b6; '>Your email was sent</span><span style='color:#1060b6; '>"</span><span style='color:#0057a6; '>/></span>
+    <span style='color:#0057a6; '>&lt;/</span><span style='color:#333385; '>alert</span><span style='color:#0057a6; '>></span>        
+<span style='color:#0057a6; '>&lt;/</span><span style='color:#333385; '>tellAFriend</span><span style='color:#0057a6; '>></span>
+</pre>
+  
+    <p><strong><u><a name="modify_slideshow">Slide Show</a></u></strong></p>
+<p>If you want to setup a <em>slide show</em> to auto play, find the <em>slideshow</em> tag that contains <em>the autoplay</em> attributes. This attribute is a true / false parameter that specifies if the slides  should auto play. </p>	
+<pre style='color:#000020;background:#f6f8ff;'><span style='color:#0057a6; '>&lt;</span><span style='color:#333385; '>slideshow</span> <span style='color:#474796; '>autoPlay</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"</span><span style='color:#1060b6; '>false</span><span style='color:#1060b6; '>"</span><span style='color:#0057a6; '>></span>
+    <span style='color:#0057a6; '>&lt;</span><span style='color:#333385; '>alert</span> <span style='color:#474796; '>delay</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"</span><span style='color:#1060b6; '>2000</span><span style='color:#1060b6; '>"</span><span style='color:#0057a6; '>></span>
+        <span style='color:#0057a6; '>&lt;</span><span style='color:#333385; '>on</span> <span style='color:#474796; '>src</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"</span><span style='color:#1060b6; '>Slideshow started</span><span style='color:#1060b6; '>"</span><span style='color:#0057a6; '>/></span>
+        <span style='color:#0057a6; '>&lt;</span><span style='color:#333385; '>off</span> <span style='color:#474796; '>src</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"</span><span style='color:#1060b6; '>Slideshow stoped</span><span style='color:#1060b6; '>"</span><span style='color:#0057a6; '>/></span>
+    <span style='color:#0057a6; '>&lt;/</span><span style='color:#333385; '>alert</span><span style='color:#0057a6; '>></span>    
+<span style='color:#0057a6; '>&lt;/</span><span style='color:#333385; '>slideshow</span><span style='color:#0057a6; '>></span>
+</pre>            
+            <br />
+<p><strong><u><a name="modify_music">Music</a></u></strong></p>
+In the <em>setup</em> part of XML the music tag is  for setting up the alert messages for music events.    
+            <br />     
+<pre style='color:#000020;background:#f6f8ff;'><span style='color:#0057a6; '>&lt;</span><span style='color:#333385; '>music</span><span style='color:#0057a6; '>></span>
+    <span style='color:#0057a6; '>&lt;</span><span style='color:#333385; '>alert</span> <span style='color:#474796; '>delay</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"</span><span style='color:#1060b6; '>2000</span><span style='color:#1060b6; '>"</span><span style='color:#0057a6; '>></span>    
+        <span style='color:#0057a6; '>&lt;</span><span style='color:#333385; '>on</span> <span style='color:#474796; '>src</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"</span><span style='color:#1060b6; '>Loading please wait, music will start playing in a second.</span><span style='color:#1060b6; '>"</span><span style='color:#0057a6; '>/></span>
+        <span style='color:#0057a6; '>&lt;</span><span style='color:#333385; '>off</span> <span style='color:#474796; '>src</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"</span><span style='color:#1060b6; '>Music stoped</span><span style='color:#1060b6; '>"</span><span style='color:#0057a6; '>/></span>
+    <span style='color:#0057a6; '>&lt;/</span><span style='color:#333385; '>alert</span><span style='color:#0057a6; '>></span>    
+<span style='color:#0057a6; '>&lt;/</span><span style='color:#333385; '>music</span><span style='color:#0057a6; '>></span>
+</pre>
+If you want to know how to edit those settings, please see the <em><a href="#modify_alert">Alert messages</a></em> section. The most important settings are placed inside each flip book. Flipbook<em></em> tags have a child tag called <em>music</em>.  Each of those <em>music</em>  tags contains 3 attributes:
+<ul>
+  <strong>src</strong> - specifies the path to the mp3 file that will be played
+</ul>   
+<ul>
+  <strong>autoplay</strong> - a boolean value; specifies if the music will be auto played</ul> 
+<ul>
+  <strong>loop</strong> - a boolean value; specifies if the music should be automatically looped when the song stops playing
+</ul><pre style='color:#000020;background:#f6f8ff;'><br /><span style='color:#0057a6; '>&lt;</span><span style='color:#333385; '>music</span> <span style='color:#474796; '>src</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"</span><span style='color:#1060b6; '>sound.mp3</span><span style='color:#1060b6; '>"</span> <span style='color:#474796; '>autoPlay</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"</span><span style='color:#1060b6; '>false</span><span style='color:#1060b6; '>"</span> <span style='color:#474796; '>loop</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"</span><span style='color:#1060b6; '>true</span><span style='color:#1060b6; '>"</span><span style='color:#0057a6; '>/></span><br />
+</pre>          
+The music settings are placed inside <em>flipbook</em> tags because then you are able to specify separate songs for each of the books. 
+<br />
+<br />
+<p><strong><u><a name="modify_copyright">Copyright Footer</a></u></strong></p>
+<img src="images/copy.jpg" alt="Copyright footer"/>
+<p>
+<em>Copyright</em> tag contains three attributes:
+<ul>
+  <div align="left"><strong>src</strong> - specifies what text will be displayed in the footer 
+  </div>
+</ul>
+<div align="left">
+  <ul>
+    <strong>url</strong> - specifies what URL will be called after clicking on the footer</ul>
+  <ul>  
+    <strong>target</strong> -  Choose between two targets: <em>_self</em> -  an URL will be opened in the same window or <em>_blank</em> - the URL will be opened in new window. (There is also a third one called <em>_frame</em>.)
+  </ul>
+</div>
+</p>
+<pre style='color:#000020;background:#f6f8ff;'><br /><span style='color:#0057a6; '>&lt;</span><span style='color:#333385; '>copyrights</span> <span style='color:#474796; '>src</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"</span><span style='color:#1060b6; '>Copyright (C) 2010, massiveProCreation</span><span style='color:#1060b6; '>"</span> 
+<span style='color:#474796; '>url</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"</span><span style='color:#1060b6; '>http://activeden.net/user/mpc?ref=mpc</span><span style='color:#1060b6; '>"</span> <span style='color:#474796; '>target</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"</span><span style='color:#1060b6; '>_blank</span><span style='color:#1060b6; '>"</span><span style='color:#0057a6; '>/></span><br />
+</pre>
+
+
+<p><strong><u><a name="modify_arrows">Arrows</a></u></strong></p>
+<img src="images/arrows.jpg" alt="Arrows" />
+<p>The last node in the <em>setup</em> tag is called <em>other. </em>There you will find an <em>arrows</em> tag that allows you to enable or disable the arrows that are shown on either sides of the flip book. Simply change the state attribute.</p>	
+<pre style='color:#000020;background:#f6f8ff;'><span style='color:#0057a6; '>&lt;</span><span style='color:#333385; '>other</span><span style='color:#0057a6; '>></span>
+    <span style='color:#0057a6; '>&lt;</span><span style='color:#333385; '>arrows</span> <span style='color:#474796; '>state</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"</span><span style='color:#1060b6; '>enabled</span><span style='color:#1060b6; '>"</span><span style='color:#0057a6; '>/></span>    
+<span style='color:#0057a6; '>&lt;/</span><span style='color:#333385; '>other</span><span style='color:#0057a6; '>></span>
+</pre>
+<br />
+<p><strong><u><a name="modify_preloading">Pre Loading</a></u></strong></p>
+<img src="images/preloading.png" alt="Preloading" />
+<p>You may want to change the information that is displayed under the pre loader while the application is loading. There are five messages that  can be displayed. Four of them are set through XML in the <em>preloading</em> node and the fifth  (for loading XML) is set in the <em>index.html</em> file in the <em>flashvars</em> section.  The code is so clear it doesn't need any further explanation.</p>	
+<pre style='color:#000020;background:#f6f8ff;'><span style='color:#0057a6; '>&lt;</span><span style='color:#333385; '>preloading</span><span style='color:#0057a6; '>></span>
+    <span style='color:#0057a6; '>&lt;</span><span style='color:#333385; '>background</span> <span style='color:#474796; '>src</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"</span><span style='color:#1060b6; '>LOADING BACKGROUND</span><span style='color:#1060b6; '>"</span><span style='color:#0057a6; '>/></span>
+    <span style='color:#0057a6; '>&lt;</span><span style='color:#333385; '>covers</span> <span style='color:#474796; '>src</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"</span><span style='color:#1060b6; '>LOADING COVERS</span><span style='color:#1060b6; '>"</span><span style='color:#0057a6; '>/></span>
+    <span style='color:#0057a6; '>&lt;</span><span style='color:#333385; '>book</span> <span style='color:#474796; '>src</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"</span><span style='color:#1060b6; '>LOADING BOOK</span><span style='color:#1060b6; '>"</span><span style='color:#0057a6; '>/></span>
+    <span style='color:#0057a6; '>&lt;</span><span style='color:#333385; '>photo</span> <span style='color:#474796; '>src</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"</span><span style='color:#1060b6; '>LOADING BIGGER PHOTO</span><span style='color:#1060b6; '>"</span><span style='color:#0057a6; '>/></span>
+<span style='color:#0057a6; '>&lt;/</span><span style='color:#333385; '>preloading</span><span style='color:#0057a6; '>></span>
+</pre>
+
+<pre style='color:#000020;background:#f6f8ff;'><span style='color:#1060b6; '>var</span><span style='color:#308080; '> </span>flashvars <span style='color:#308080; '>=</span> <span style='color:#308080; '>{</span>
+    <span style='color:#1060b6; '>xmlPath</span><span style='color:#308080; '>:</span>          'setup<span style='color:#308080; '>.</span>xml'<span style='color:#308080; '>,</span>
+    <span style='color:#1060b6; '>preloaderMessage</span><span style='color:#308080; '>:</span> 'LOADING XML'<span style='color:#308080; '>,</span>
+    <span style='color:#1060b6; '>title</span><span style='color:#308080; '>:</span>            'XML Flip Book <span style='color:#308080; '>/</span> AS3 v 1<span style='color:#308080; '>.</span>2' 
+<span style='color:#1060b6; '>};</span>
+</pre>
+
+<br />
+<p><strong><u><a name="modfy_title">Website Title</a></u></strong></p>
+
+<p>If you want to change the website title that is displayed in the upper browser bar, you need to open  <em>index.html, </em> go to the <em>flashvars</em> section, and change the value of the <em>title</em> attribute.</p>	
+
+
+<pre style='color:#000020;background:#f6f8ff;'><span style='color:#1060b6; '>var</span><span style='color:#308080; '> </span>flashvars <span style='color:#308080; '>=</span> <span style='color:#308080; '>{</span>
+    <span style='color:#1060b6; '>xmlPath</span><span style='color:#308080; '>:</span>          'setup<span style='color:#308080; '>.</span>xml'<span style='color:#308080; '>,</span>
+    <span style='color:#1060b6; '>preloaderMessage</span><span style='color:#308080; '>:</span> 'LOADING XML'<span style='color:#308080; '>,</span>
+    <span style='color:#1060b6; '>title</span><span style='color:#308080; '>:</span>            'XML Flip Book <span style='color:#308080; '>/</span> AS3 v 1<span style='color:#308080; '>.</span>2' 
+<span style='color:#1060b6; '>};</span>
+</pre>
+
+<br />
+<p><strong><u><a name="modify_xml">XML Path</a></u></strong></p>
+
+<p>If you want to change the path to the XML file (or name of the XML file), you need to open <em>index.html</em>, go to the <em>flashvars</em> section, and change the value of <em>the xmlPath</em> attribute. (The default name of XML file is <em>setup.xml</em>. It is placed in the main folder so we can just write "setup.xml")</p>	
+
+
+<pre style='color:#000020;background:#f6f8ff;'><span style='color:#1060b6; '>var</span><span style='color:#308080; '> </span>flashvars <span style='color:#308080; '>=</span> <span style='color:#308080; '>{</span>
+    <span style='color:#1060b6; '>xmlPath</span><span style='color:#308080; '>:</span>          'setup<span style='color:#308080; '>.</span>xml'<span style='color:#308080; '>,</span>
+    <span style='color:#1060b6; '>preloaderMessage</span><span style='color:#308080; '>:</span> 'LOADING XML'<span style='color:#308080; '>,</span>
+    <span style='color:#1060b6; '>title</span><span style='color:#308080; '>:</span>            'XML Flip Book <span style='color:#308080; '>/</span> AS3 v 1<span style='color:#308080; '>.</span>2' 
+<span style='color:#1060b6; '>};</span>
+</pre>
+
+<br />
+<p><strong><u><a name="modify_pdf">PDF Generator</a></u></strong></p>
+<p>You can either link the "Download pdf" button to the PDF file previously generated by you or give the user the ability to generate a PDF. that way the user can only include the pages that are interesting for them. 
+Inside the <em>PDF</em> tag you will find <em>setup</em> and <em>alert</em> tags. The setup tag has 3 attributes:
+<ul>
+  <strong>method</strong> - If you set the method to "generate&quot;, then you will give the user the ability to generate a PDF. If you want to link this to a PDF created by you, set the value of this to "link". 
+</ul>
+<ul> <strong>type</strong> - If you have chosen the generate method, here you specify the page dimensions for publishing the PDF. You can choose between A5, A4, or A3. 
+</ul>
+<ul> <strong>url</strong> - If you have chosen the link method,  specify the path to the PDF file in the attribute URL. 
+</ul>
+<br/>
+If you don't know how to setup the alert tag, please see the "<a href="#modify_alert">Alert messages</a>" section.
+</p>
+<pre style='color:#000020;background:#f6f8ff;'><span style='color:#0057a6; '>&lt;</span><span style='color:#333385; '>pdf</span><span style='color:#0057a6; '>></span>
+    <span style='color:#0057a6; '>&lt;</span><span style='color:#333385; '>setup</span> <span style='color:#474796; '>method</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"</span><span style='color:#1060b6; '>link</span><span style='color:#1060b6; '>"</span> <span style='color:#474796; '>type</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"</span><span style='color:#1060b6; '>A5</span><span style='color:#1060b6; '>"</span><span style='color:#0057a6; '>/></span>
+    <span style='color:#0057a6; '>&lt;</span><span style='color:#333385; '>alert</span> <span style='color:#474796; '>delay</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"</span><span style='color:#1060b6; '>2000</span><span style='color:#1060b6; '>"</span><span style='color:#0057a6; '>></span>
+        <span style='color:#0057a6; '>&lt;</span><span style='color:#333385; '>generate</span> <span style='color:#474796; '>src</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"</span><span style='color:#1060b6; '>Please wait while pdf is generating, you will be prompted with a 'save us' window.</span><span style='color:#1060b6; '>"</span><span style='color:#0057a6; '>/></span>
+    <span style='color:#0057a6; '>&lt;/</span><span style='color:#333385; '>alert</span><span style='color:#0057a6; '>></span>
+<span style='color:#0057a6; '>&lt;/</span><span style='color:#333385; '>pdf</span><span style='color:#0057a6; '>></span>
+</pre>
+<p><strong>NOTICE</strong>: Remember to compile your FLA file after applying changes inside the FLA file. You don't have to re-compile after making changes to the XML file! <u> To re-compile your file, go to Control>Test Movie.</u></p>
+<br />
+<div class="line">massive pro creation</div>
+			<p><h2><a name="flipbook">Flip Book settings:</a></h2>	</p>
+            <p>If you haven't read the <a href="#modify"><em>How to use and modify this file, </em></a> section please do.</p>
+<p><strong><u><a name="flipbook_basic">Basic Setup</a></u></strong></p>
+<img src="images/flipbook.png" alt="Flip Book" />
+<p>Setting up your Flip Books is the most important part because here you will setup the content of your book/books. Remember that each <em>flipbook</em> tag placed in in the XML will represent one book. For example, if you want to have only one book on your website, you need to remove the other two from XML. Each Flip Book has 15 basic parameters that need to be setup:
+<ul>
+  <strong>width</strong> - If you want your flip book to have static dimension, fill this field with a pixel value (for example, 700) that will be the width of your Flip Book. Remember that the value also includes the width of a border around the book. However, if you want your flip book to fit the browser size, (When the browser is resized, the book will also resize.) place '0' (zero) as a value for this attribute.
+</ul>
+<ul>
+  <strong>height</strong> - If you want your flip book to have static dimension,  fill this field with a pixel value (for example, 500) that will be the height of your Flip Book. Remember that the value also includes the height of a border around the book. However, if you want your flip book to fit the browser size, (When the browser is resized, the book will be also resized) place '0' (zero) as a value for this attribute.
+</ul>
+<ul>
+  <strong>proportion</strong> - This attribute only applies when you have chosen the resizable version of the book (width and height = 0). It specifies the proportion of the book; so for example when you enter 0.7, that means that the height will be equal to 0.7 of  the book width.  However, when you choose to use a static size for the book (for example, 700 x 500), you can leave this attribute blank.
+</ul>
+<ul>
+  <strong>border</strong> - a pixel value that specifies the thickness of the border around the book
+</ul>
+<ul>
+  <strong>middleBorder</strong> - a pixel value that specifies the thickness of the border (line) between the pages
+</ul>
+<ul>
+  <strong>borderColor</strong> -  the hexadecimal value that specifies the color of the border
+</ul>
+<ul><strong>borderAlpha</strong> -  a 0 - 1 value which specifies the alpha (transparency) of the border
+</ul>
+<ul>
+  <strong>pdf</strong> - If you have chosen to generate a PDF version of your book by yourself for users to download, here is where you place the link to the PDF. However, if you want the PDF to be automatically generated or you have disabled the PDF functionality from your application, you can leave this  blank.
+</ul>
+<ul>
+  <strong>title</strong> - represents the title of your book to be displayed in the URL and on the "choose book" screen if you have more then one book
+</ul>
+<ul>
+  <strong>bitmapSmoothing</strong> - a boolean value that specifies if the bit map smoothing is enabled or disabled (default setting is true). If you want to know more about bitmapSmoothing read this.
+</ul>
+<ul>
+  <strong>doubleClick</strong> -  a boolean value that specifies if a user is able to turn the page by double clicking on its corner
+</ul>
+<ul>
+  <strong>resizeSwf</strong> -  a boolean value that specifies if the SWF file will be resized to fill the page</ul>
+<ul>
+  <strong>resizeContent</strong> -  a boolean value that specifies if the content page will be resized to fill the full size of a page
+</ul>
+<ul>
+  <strong>resizeTableOfContent</strong> -  a boolean value that specifies if the table of content will be resized to fill the full size of a pag.
+</ul>
+<ul>
+  <strong>zoom</strong> -  a boolean value that specifies if the zoom functionality is enabled for the book. If you want  zoom to work, be sure to also enable it  in the <em>buttons</em> settings at the beginning of the<em> setup.xml.</em>
+</ul>
+</p>	
+
+
+<pre style='color:#000020;background:#f6f8ff;'><span style='color:#1060b6; '>&lt;flipbook</span><span style='color:#308080; '> </span>
+    <span style='color:#1060b6; '>width</span><span style='color:#308080; '>=</span>"700" 
+    <span style='color:#1060b6; '>height</span><span style='color:#308080; '>=</span>"500" 
+    <span style='color:#1060b6; '>proportion</span><span style='color:#308080; '>=</span>"0" 
+    <span style='color:#1060b6; '>boarder</span><span style='color:#308080; '>=</span>"5" 
+    <span style='color:#1060b6; '>middleBoarder</span><span style='color:#308080; '>=</span>"0<span style='color:#308080; '>.</span>5" 
+    <span style='color:#1060b6; '>boarderColor</span><span style='color:#308080; '>=</span>"0x000000" 
+    <span style='color:#1060b6; '>boarderAlpha</span><span style='color:#308080; '>=</span>"1" 
+    <span style='color:#1060b6; '>pdf</span><span style='color:#308080; '>=</span>"<span style='color:#5555dd; '>http://www.google.com/pdf_version.pdf</span>" 
+    <span style='color:#1060b6; '>title</span><span style='color:#308080; '>=</span>"Features Book" 
+    <span style='color:#1060b6; '>bitmapSmoothing</span><span style='color:#308080; '>=</span>"true" 
+    <span style='color:#1060b6; '>doubleClick</span><span style='color:#308080; '>=</span>"true" 
+    <span style='color:#1060b6; '>resizeSwf</span><span style='color:#308080; '>=</span>"true" 
+    <span style='color:#1060b6; '>resizeContent</span><span style='color:#308080; '>=</span>"false"
+    <span style='color:#1060b6; '>resizeTableOfContent</span><span style='color:#308080; '>=</span>"false"
+    <span style='color:#1060b6; '>zoom</span><span style='color:#308080; '>=</span>"false"<span style='color:#308080; '>></span>
+
+<span style='color:#1060b6; '>&lt;!--</span><span style='color:#308080; '> </span>Here goes the content of a book <span style='color:#308080; '>-</span><span style='color:#308080; '>-</span><span style='color:#308080; '>></span>
+
+<span style='color:#1060b6; '>&lt;/flipbook></span>
+</pre>
+
+<br />
+<p><strong><u><a name="flipbook_alerts">Alerts</a></u></strong></p>
+<p>Next in the <em>flipboook</em> tag there are Alerts settings. If you want to setup the alert messages displayed by the Flip Book, go to the alert node; and there you will find six different messages. If you need more information about setting up the Alerts, read<a href="#modify_alert"> this section</a>.</p>
+
+<pre style='color:#000020;background:#f6f8ff;'><span style='color:#1060b6; '>&lt;alert></span>
+    <span style='color:#1060b6; '>&lt;loadingNext</span><span style='color:#308080; '> </span>src<span style='color:#308080; '>=</span>"Please wait while the new page loads<span style='color:#308080; '>.</span>"<span style='color:#308080; '>/</span><span style='color:#308080; '>></span>
+    <span style='color:#1060b6; '>&lt;loading</span><span style='color:#308080; '> </span>src<span style='color:#308080; '>=</span>"Please wait while the page loads<span style='color:#308080; '>.</span>"<span style='color:#308080; '>/</span><span style='color:#308080; '>></span>
+    <span style='color:#1060b6; '>&lt;pageNumber</span><span style='color:#308080; '> </span>src<span style='color:#308080; '>=</span>"There are only 18 pages"<span style='color:#308080; '>/</span><span style='color:#308080; '>></span>
+<span style='color:#1060b6; '>&#xa0;&#xa0;&#xa0;&#xa0;&lt;video></span>
+        <span style='color:#1060b6; '>&lt;enlarge</span><span style='color:#308080; '> </span>src<span style='color:#308080; '>=</span>"Double Click to enlarge the video"<span style='color:#308080; '>/</span><span style='color:#308080; '>></span>
+        <span style='color:#1060b6; '>&lt;close</span><span style='color:#308080; '> </span>src<span style='color:#308080; '>=</span>"Double Click to close the video"<span style='color:#308080; '>/</span><span style='color:#308080; '>></span>
+        <span style='color:#1060b6; '>&lt;preloading</span><span style='color:#308080; '> </span>src<span style='color:#308080; '>=</span>"LOADING VIDEO"<span style='color:#308080; '>/</span><span style='color:#308080; '>></span>
+<span style='color:#1060b6; '>&#xa0;&#xa0;&#xa0;&#xa0;&lt;/video></span>
+<span style='color:#1060b6; '>&lt;/alert></span>
+</pre>
+
+<br />
+
+<p><strong><u><a name="flipbook_shadows">Shadows</a></u></strong></p>
+<img src="images/shadows.jpg" alt="Flip Book shadows" />
+<p>There are 4 shadows in the flip book. Each has its alpha value (0 - 1) represented by the <em>src</em> attribute in each node. If you don't know which shadow is which, you can look them up on the above image. If you want to disable some of the shadows, set the chosen shadow's value to 0.</p>
+
+<pre style='color:#000020;background:#f6f8ff;'><span style='color:#1060b6; '>&lt;shadows></span>
+    <span style='color:#1060b6; '>&lt;inner</span><span style='color:#308080; '> </span>src<span style='color:#308080; '>=</span>"1"<span style='color:#308080; '>/</span><span style='color:#308080; '>></span>
+    <span style='color:#1060b6; '>&lt;curveGlow</span><span style='color:#308080; '> </span>src<span style='color:#308080; '>=</span>"1"<span style='color:#308080; '>/</span><span style='color:#308080; '>></span>
+    <span style='color:#1060b6; '>&lt;pageShadow</span><span style='color:#308080; '> </span>src<span style='color:#308080; '>=</span>"1"<span style='color:#308080; '>/</span><span style='color:#308080; '>></span>
+    <span style='color:#1060b6; '>&lt;innerPageShadow</span><span style='color:#308080; '> </span>src<span style='color:#308080; '>=</span>"1"<span style='color:#308080; '>/</span><span style='color:#308080; '>></span>
+<span style='color:#1060b6; '>&lt;/shadows></span>
+</pre>
+
+<br />
+<p><strong><u><a name="flipbook_music">Music</a></u></strong></p>
+
+<p>Each flip book has its own sound settings. The <em>music</em> tag contains 3 attributes:
+<ul>
+  <strong>src</strong> -  path to the sound file
+</ul>
+<ul>
+  <strong>autoPlay</strong> - boolean value; if set to true, the sound file will start to play by itself
+</ul>
+<ul>
+  <strong>loop</strong> - boolean value; if set to true, the sound file will be looped at the end
+</ul>
+</p>
+
+<pre style='color:#000020;background:#f6f8ff;'><span style='color:#1060b6; '>
+
+&lt;music</span><span style='color:#308080; '> </span>src<span style='color:#308080; '>=</span>"sound<span style='color:#308080; '>.</span>mp3" autoPlay<span style='color:#308080; '>=</span>"false" loop<span style='color:#308080; '>=</span>"true"<span style='color:#308080; '>/>
+</span>
+</pre>
+
+<br />
+<p><strong><u><a name="flipbook_table">Table of Contents</a></u></strong></p>
+
+<p><em>TableOfContent</em> node has only one attribute called <em>number</em>. This attribute specifies the page to display as the table of contents. Clicking the table of contents button in the upper UI will redirect the user to this page.
+</p>
+
+<pre style='color:#000020;background:#f6f8ff;'><span style='color:#1060b6; '>
+
+&lt;tableOfContent</span><span style='color:#308080; '> </span>number<span style='color:#308080; '>=</span>&quot;2&quot;<span style='color:#308080; '>/</span><span style='color:#308080; '>&gt;
+</span></pre>
+
+<br />
+
+<p><strong><u><a name="flipbook_thumbnails">Thumbnails</a></u></strong></p>
+
+<p>The <em>thumbnails</em> node specifies the border parameters of the displayed small page previews. (for example, in the "show all pages" panel) <em>The Border</em> node contains two attributes:
+<ul>
+  <strong>thickness</strong> - specifies the thickness of the border around each thumbnail (in pixels)
+</ul>
+<ul>
+  <strong>color</strong> - specifies the color of the boarder (hexadecimal)</ul>
+</p>
+
+<pre style='color:#000020;background:#f6f8ff;'><span style='color:#0057a6; '>&lt;</span><span style='color:#333385; '>thumbnails</span><span style='color:#0057a6; '>></span>
+    <span style='color:#0057a6; '>&lt;</span><span style='color:#333385; '>boarder</span> <span style='color:#474796; '>thickness</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"</span><span style='color:#1060b6; '>5</span><span style='color:#1060b6; '>"</span> <span style='color:#474796; '>color</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"</span><span style='color:#1060b6; '>0x111111</span><span style='color:#1060b6; '>"</span><span style='color:#0057a6; '>/></span>
+<span style='color:#0057a6; '>&lt;/</span><span style='color:#333385; '>thumbnails</span><span style='color:#0057a6; '>></span>
+</pre>
+
+<br />
+
+<p><strong><u><a name="flipbook_adding">Adding and Removing Pages</a></u></strong></p>
+
+<p>The most important part of customizing your book is adding and removing pages. Each page is represented by <em>a page</em> node. Each page node has a number of attributes. (Remember that the number of pages has to be even and that you need to have at least 4 pages - covers + two pages in the middle.) You can use different file formats as pages: graphic formats (JPG, PNG, ECT) and SWF files.
+<ul>
+  <strong>src</strong> - Each page needs to have this attribute specified. It describes the page source -  the path to the page file (image or SWF).
+</ul>
+<ul>
+  <strong>type</strong> - This attribute specifies the page type. There are four types of pages. If you want a standard single page, you can leave this attribute blank or don't include it at all:
+  <li><strong>double</strong> - If you choose <em>double</em>, your page will be interpreted as double which mean that the image applied in the <em>src</em> attribute will be displayed on both pages. This is a great way to display  landscape photos. You don't have to crop the photo and edit them. You can simply embed them into FlipBbook with a line of code. (You can only use images as double pages).</li>
+<li><strong>video</strong> - If you choose this page type, it will display a video file (flv format). The video player will be automatically added to the page. When <em>video</em> type is applied, one more attribute need specifying. This is called <em>videoSrc</em>. This attribute specifies the path to the video file that will be displayed on the page. Also if you want to make sure your video will display correctly please specify three more attributes <em>duration</em> - video length in seconds, <em>width</em> - the width of the video (in pixels), <em>height</em> - height of the video (in pixels). Why it is important to specify those items? Because sometimes the flv files are not properly endoded and this may couse a video player error.</li>
+<li><strong>table</strong> - If you have chosen this page type, it will be used as the <em>Table of contents</em> for the book. Pages of this type needs a few more attributes:
+  <ul>
+  <strong>bgColor</strong> - specifies the color of the table of content button (hexadecimal)
+</ul>
+<ul>
+  <strong>bgAlpha</strong> - specifies the alpha of the table of content button (0 - 1)
+</ul>
+<ul>
+  <strong>textColor</strong> -  specifies the text color of the table of content button (hexadecimal)
+</ul>
+If you specified those attributes, it's time to setup each of the buttons that will be displayed in the table. Every button is represented by a <em>list</em> node. Each of these nodes contains two attributes (Remember to put the <em>list</em> nodes between the opening and closing <em>page</em> tags; please see the example below):
+<ul>
+  <strong>src</strong> - specifies the text that will be displayed on the button
+</ul>
+<ul>
+  <strong>number</strong> - specifies the page number that the user will see after clicking the button
+</ul>
+</li>
+<li><strong>content</strong> - This type of page displays HTML formatted text. If you want to display some text on the page, you don't have to make those pages in Photoshop (or other graphic program). You can simply select an image and add the text in the XML file. This type of page needs two some additional attributes:
+  <ul>
+    <strong>width</strong> -  specifies the width of your text field
+  </ul>
+<ul><strong>height</strong> - specifies the height of your text field</ul>
+<br />
+Text that you would like to display has to be embedded inside the <em>page</em> tags (see example below) and also inside the < ![CDATA[     TEXT GOES HERE     ]] > (remove the spaces from the opening and closing tags).
+</li>
+</ul>
+</p>
+<pre style='color:#000020;background:#f6f8ff;'><span style='color:#0057a6; '>&lt;</span><span style='color:#333385; '>page</span> <span style='color:#474796; '>src</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"</span><span style='color:#1060b6; '>pages/cover.jpg</span><span style='color:#1060b6; '>"</span> <span style='color:#0057a6; '>/></span>
+<span style='color:#0057a6; '>&lt;</span><span style='color:#333385; '>page</span> <span style='color:#474796; '>src</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"</span><span style='color:#1060b6; '>pages/table1.jpg</span><span style='color:#1060b6; '>"</span><span style='color:#0057a6; '>/></span>
+<span style='color:#0057a6; '>&lt;</span><span style='color:#333385; '>page</span> <span style='color:#474796; '>src</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"</span><span style='color:#1060b6; '>pages/table2.jpg</span><span style='color:#1060b6; '>"</span> <span style='color:#474796; '>type</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"</span><span style='color:#1060b6; '>table</span><span style='color:#1060b6; '>"</span> <span style='color:#474796; '>bgColor</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"</span><span style='color:#1060b6; '>0xCCCCCC</span><span style='color:#1060b6; '>"</span> <span style='color:#474796; '>bgAlpha</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"</span><span style='color:#1060b6; '>0.3</span><span style='color:#1060b6; '>"</span> <span style='color:#474796; '>textColor</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"</span><span style='color:#1060b6; '>0x000000</span><span style='color:#1060b6; '>"</span><span style='color:#0057a6; '>></span>
+    <span style='color:#0057a6; '>&lt;</span><span style='color:#333385; '>list</span> <span style='color:#474796; '>src</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"</span><span style='color:#1060b6; '>Table of Content</span><span style='color:#1060b6; '>"</span><span style='color:#0057a6; '>/></span>
+    <span style='color:#0057a6; '>&lt;</span><span style='color:#333385; '>list</span> <span style='color:#474796; '>src</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"</span><span style='color:#1060b6; '>Cover</span><span style='color:#1060b6; '>"</span> <span style='color:#474796; '>number</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"</span><span style='color:#1060b6; '>1</span><span style='color:#1060b6; '>"</span><span style='color:#0057a6; '>/></span>
+    <span style='color:#0057a6; '>&lt;</span><span style='color:#333385; '>list</span> <span style='color:#474796; '>src</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"</span><span style='color:#1060b6; '>Content page</span><span style='color:#1060b6; '>"</span> <span style='color:#474796; '>number</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"</span><span style='color:#1060b6; '>4</span><span style='color:#1060b6; '>"</span><span style='color:#0057a6; '>/></span>
+    <span style='color:#0057a6; '>&lt;</span><span style='color:#333385; '>list</span> <span style='color:#474796; '>src</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"</span><span style='color:#1060b6; '>Video support</span><span style='color:#1060b6; '>"</span> <span style='color:#474796; '>number</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"</span><span style='color:#1060b6; '>6</span><span style='color:#1060b6; '>"</span><span style='color:#0057a6; '>/></span>
+    <span style='color:#0057a6; '>&lt;</span><span style='color:#333385; '>list</span> <span style='color:#474796; '>src</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"</span><span style='color:#1060b6; '>Amaizing Features</span><span style='color:#1060b6; '>"</span> <span style='color:#474796; '>number</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"</span><span style='color:#1060b6; '>8</span><span style='color:#1060b6; '>"</span><span style='color:#0057a6; '>/></span>
+    <span style='color:#0057a6; '>&lt;</span><span style='color:#333385; '>list</span> <span style='color:#474796; '>src</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"</span><span style='color:#1060b6; '>Page Printing</span><span style='color:#1060b6; '>"</span> <span style='color:#474796; '>number</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"</span><span style='color:#1060b6; '>10</span><span style='color:#1060b6; '>"</span><span style='color:#0057a6; '>/></span>
+    <span style='color:#0057a6; '>&lt;</span><span style='color:#333385; '>list</span> <span style='color:#474796; '>src</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"</span><span style='color:#1060b6; '>Great Design</span><span style='color:#1060b6; '>"</span> <span style='color:#474796; '>number</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"</span><span style='color:#1060b6; '>12</span><span style='color:#1060b6; '>"</span><span style='color:#0057a6; '>/></span>
+    <span style='color:#0057a6; '>&lt;</span><span style='color:#333385; '>list</span> <span style='color:#474796; '>src</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"</span><span style='color:#1060b6; '>Swf support</span><span style='color:#1060b6; '>"</span> <span style='color:#474796; '>number</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"</span><span style='color:#1060b6; '>14</span><span style='color:#1060b6; '>"</span><span style='color:#0057a6; '>/></span>
+    <span style='color:#0057a6; '>&lt;</span><span style='color:#333385; '>list</span> <span style='color:#474796; '>src</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"</span><span style='color:#1060b6; '>XML Driven</span><span style='color:#1060b6; '>"</span> <span style='color:#474796; '>number</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"</span><span style='color:#1060b6; '>16</span><span style='color:#1060b6; '>"</span><span style='color:#0057a6; '>/></span>
+    <span style='color:#0057a6; '>&lt;</span><span style='color:#333385; '>list</span> <span style='color:#474796; '>src</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"</span><span style='color:#1060b6; '>Back Cover</span><span style='color:#1060b6; '>"</span> <span style='color:#474796; '>number</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"</span><span style='color:#1060b6; '>18</span><span style='color:#1060b6; '>"</span><span style='color:#0057a6; '>/></span>
+<span style='color:#0057a6; '>&lt;/</span><span style='color:#333385; '>page</span><span style='color:#0057a6; '>></span>    
+
+<span style='color:#0057a6; '>&lt;</span><span style='color:#333385; '>page</span> <span style='color:#474796; '>src</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"</span><span style='color:#1060b6; '>pages/content1.jpg</span><span style='color:#1060b6; '>"</span><span style='color:#0057a6; '>/></span>
+<span style='color:#0057a6; '>&lt;</span><span style='color:#333385; '>page</span> <span style='color:#474796; '>src</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"</span><span style='color:#1060b6; '>pages/content2.jpg</span><span style='color:#1060b6; '>"</span> <span style='color:#474796; '>type</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"</span><span style='color:#1060b6; '>content</span><span style='color:#1060b6; '>"</span> <span style='color:#474796; '>width</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"</span><span style='color:#1060b6; '>300</span><span style='color:#1060b6; '>"</span> <span style='color:#474796; '>height</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"</span><span style='color:#1060b6; '>400</span><span style='color:#1060b6; '>"</span><span style='color:#0057a6; '>></span>
+<span style='color:#606090; '>&lt;![CDATA[</span>&lt;img src="logo.png" align="left" />
+                        
+&lt;p>Welcome this is page with XML Driven content.
+
+&lt;b>With deeplinking every page has it's own unique url so 
+you can easily 
+&lt;a href="http://mpcreation.pl/flipbook/update1.2/#/Book%201/12">
+link to any spread you want!&lt;/a> &lt;font color="#00FF00">
+(new feature)&lt;/font>&lt;/b>    
+
+To format the text you can use bacis html tags like:
+
+&lt;li>&lt;font size="13">Font size,&lt;/font>&lt;/li>
+&lt;li>&lt;font color="#00FF00">Font color,&lt;/font>&lt;/li>
+&lt;li>&lt;b>Bold,&lt;/b>&lt;/li>
+&lt;li>&lt;i>Italic,&lt;/i>&lt;/li>
+&lt;li>&lt;u>Underline,&lt;/u>&lt;/li>
+&lt;li>Image,&lt;/li>
+&lt;li>Link: view my 
+&lt;a href="http://activeden.net/user/mpc?ref=mpc">
+ActiveDen profile.&lt;/a>&lt;/li>
+&lt;/li>&lt;/p><span style='color:#606090; '>]]&gt;</span>
+<span style='color:#0057a6; '>&lt;/</span><span style='color:#333385; '>page</span><span style='color:#0057a6; '>></span>    
+
+<span style='color:#0057a6; '>&lt;</span><span style='color:#333385; '>page</span> <span style='color:#474796; '>src</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"</span><span style='color:#1060b6; '>pages/video1.jpg</span><span style='color:#1060b6; '>"</span><span style='color:#0057a6; '>/></span>
+<span style='color:#0057a6; '>&lt;</span><span style='color:#333385; '>page</span> <span style='color:#474796; '>src</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"</span><span style='color:#1060b6; '>pages/video2.jpg</span><span style='color:#1060b6; '>"</span> <span style='color:#474796; '>type</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"</span><span style='color:#1060b6; '>video</span><span style='color:#1060b6; '>"</span> <span style='color:#474796; '>videoSrc</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"</span><span style='color:#1060b6; '>videos/zanimotion.flv</span><span style='color:#1060b6; '>"</span><span style='color:#0057a6; '>/></span>
+<span style='color:#0057a6; '>&lt;</span><span style='color:#333385; '>page</span> <span style='color:#474796; '>src</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"</span><span style='color:#1060b6; '>pages/2_3.jpg</span><span style='color:#1060b6; '>"</span> <span style='color:#474796; '>type</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"</span><span style='color:#1060b6; '>double</span><span style='color:#1060b6; '>"</span> <span style='color:#0057a6; '>/></span>
+<span style='color:#0057a6; '>&lt;</span><span style='color:#333385; '>page</span> <span style='color:#474796; '>src</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"</span><span style='color:#1060b6; '>pages/4_5.jpg</span><span style='color:#1060b6; '>"</span> <span style='color:#474796; '>type</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"</span><span style='color:#1060b6; '>double</span><span style='color:#1060b6; '>"</span><span style='color:#0057a6; '>/></span>
+<span style='color:#0057a6; '>&lt;</span><span style='color:#333385; '>page</span> <span style='color:#474796; '>src</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"</span><span style='color:#1060b6; '>pages/6_7.jpg</span><span style='color:#1060b6; '>"</span> <span style='color:#474796; '>type</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"</span><span style='color:#1060b6; '>double</span><span style='color:#1060b6; '>"</span><span style='color:#0057a6; '>/></span>                                
+<span style='color:#0057a6; '>&lt;</span><span style='color:#333385; '>page</span> <span style='color:#474796; '>src</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"</span><span style='color:#1060b6; '>pages/8.jpg</span><span style='color:#1060b6; '>"</span><span style='color:#0057a6; '>/></span>
+<span style='color:#0057a6; '>&lt;</span><span style='color:#333385; '>page</span> <span style='color:#474796; '>src</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"</span><span style='color:#1060b6; '>pages/9.swf</span><span style='color:#1060b6; '>"</span><span style='color:#0057a6; '>/></span>
+<span style='color:#0057a6; '>&lt;</span><span style='color:#333385; '>page</span> <span style='color:#474796; '>src</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"</span><span style='color:#1060b6; '>pages/10_11.jpg</span><span style='color:#1060b6; '>"</span> <span style='color:#474796; '>type</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"</span><span style='color:#1060b6; '>double</span><span style='color:#1060b6; '>"</span><span style='color:#0057a6; '>/></span>
+<span style='color:#0057a6; '>&lt;</span><span style='color:#333385; '>page</span> <span style='color:#474796; '>src</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"</span><span style='color:#1060b6; '>pages/bcover.jpg</span><span style='color:#1060b6; '>"</span> <span style='color:#0057a6; '>/></span> 
+
+<span style='color:#ffffff; background:#dd9999; font-weight:bold; font-style:italic; '>&lt;</span>/flipbook>
+</pre>
+
+<br />
+<div class="line">massive pro creation</div>
+<p><h2><a name="good">Good to know</a></h2></p>
+
+<p><u><strong><a name="good_xml">XML Structure</a></strong></u></p>
+<p>The XML file requires a <em>data</em> tag at the beginning and a <em>/data</em> tag at the end file's end. In other words all the information in the XML file has to be wrapped in the <em>data</em> tags.</p>
+
+<p><u><strong><a name="good_recompiling">Recompiling a File</a></strong></u></p>
+<p>Remember to compile your FLA file after you apply any changes inside that file. You don't have to recompile after you have done any changes to the XML file! To compile your file go to Control>Test Movie.</p>
+
+<p><u><strong><a name="good_using">Using SWFs as Pages</a></strong></u></p>
+<p>If you have trouble with the position of your SWF files, make sure that they have a background. It can be transparent. For example, if your SWF  has 300x200 pixels and it doesn't position right on the page, open the source of your SWF, create a movie clip with 300x200 color fill, set its alpha to 0, and place it at 0,0 point so the movie clip covers the whole stage. Make sure your movie clip is on the lowest layer so it doesn't cover any of your active objects. Also make sure that your SWF is ActionScript 3.0 and publish with Flash Player 9.0+. Additionally, it is better when nothing goes off stage in your SWF.</p>
+
+<p><u><strong><a name="good_embeding">Embedding Special Characters</a></strong></u></p>
+<p>First, open the preview.fla file with Flash IDE. Then open  the library panel (Window>Library) form. There you have to choose the movie clip in which you want to display the special characters. For example, if you want to do this for the Content Page module, you have to find the contentPage movie clip and double click it. Inside, you will find a Text Field. Select the Text Field and then choose "characters embedding..." from the properties panel. The embedding panel will pop up. Specify the characters  to embed, and then click OK. When you finish embedding your characters, re-compile the file by clicking ctrl/cmd+enter. If you need more information, please watch this <a href="http://blog.activeden.net/resources/common- questions-by-flashden-buyers/common-questions-using-special-characters-like/">video tutorial</a>.</p>
+
+<p><strong><u><a name="good_content">Content Page</a></u></strong></p>
+<p>Make sure that your page content is between < ![CDATA[ tag and ]] >.  If you want the text to be displayed properly, make sure your text is also inside the < p > and < / p > tag. See the example (remove the spaces from the tags).</p>
+
+
+				<p align="center"><a href="http://activeden.net/item/xml-flip-book-as3/63869?ref=mpc" onclick="pageTracker._trackPageview('/ad_purchase2’);">Purchase</a> | <a href="http://activeden.net/item/xml-flip-book-as3/full_screen_preview/63869?ref=mpc" onclick="pageTracker._trackPageview('/ad_preview2’);">See preview</a> | <a href="http://activeden.net/user/mpc/portfolio?ref=mpc" onclick="pageTracker._trackPageview('/ad_portfolio2’);">Portfolio</a></p>
+	
+			<div id="footer">
+				<div id="copyright">
+					<p>copyright [c] 2010 <a href="http://www.massiveProCreation.com" onclick="pageTracker._trackPageview('/mpc_com’);">massiveProCreation</a><br/><a href="http://www.jgaj.pl/" onclick="pageTracker._trackPageview('/design’);" target="blank">design</a> by <a href="http://www.jgaj.pl/" onclick="pageTracker._trackPageview('/jgaj_pl’);" target="blank">jgaj.pl</a></p>
+				</div>
+				
+				<div id="blog">
+					<p>visit my blog at: <a href="http://www.blog.mpcreation.pl/" onclick="pageTracker._trackPageview('/blog’);">www.blog.mpcreation.pl</a></p>
+				</div>
+				<div class="clear">massiveProCreation </div>
+			</div><!-- footer -->
+			
+		  </div><!-- #conten-->
+		</div><!--#page-->
+</html>

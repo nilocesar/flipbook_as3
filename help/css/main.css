@@ -1,0 +1,164 @@
+/* = Riddle's Reset CSS ( http://perfectionorvanity.com/ )
+---------------------------------------------------------------------------- */
+
+html, body, h1, h2, h3, h4, h5, h6, div, span,
+blockquote, p, address, form, fieldset, img,
+ul, ol, dl, dt, dd, li, hr, table, td, th,
+strong, em, sup, sub, dfn, ins, del, q, cite,
+var, samp, code, kbd, tt {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+ul { list-style: none; }
+legend { display: none; }
+
+input, textarea, select, option, optgroup, button {
+	font-size: 1em;
+}
+
+h1, h2, h3, h4, h5, h6 { font-weight: normal; }
+
+/* = main
+---------------------------------------------------------------------------- */
+
+body, input, textarea, select, option, optgroup, button {
+	font-family: "Calibri", "Verdana", "Tahoma", sans-serif;
+}
+
+
+a:hover { text-decoration: none; }
+
+
+/* = layout
+---------------------------------------------------------------------------- */
+
+body{
+	
+	line-height:120%;
+	font-family: Arial;
+	background: #222E36 url('../images/bg-body2.jpg') repeat-x;
+	
+}
+
+#page{
+	width:970px;
+	margin:0 auto;
+	color:#A4B4BE;
+	font-size:12px;
+	text-align:justify;
+}
+
+/* = h
+---------------------------------------------------------------------------- */
+h1{
+	font-size:24px;
+	color:#DDF3F8;
+	font-weight:900;
+	text-transform:uppercase;
+	padding:0 0 5px 0
+}
+
+h2{
+	color:#BBDCE5;
+	font-size:15px;
+	font-weight:900;
+	text-transform:uppercase;
+	margin:0 0 5px 0
+}
+
+
+/* = header
+---------------------------------------------------------------------------- */
+
+#header{
+	height:197px;
+	background:url('../images/bg-header2.jpg') no-repeat;
+}
+
+#project{
+	width:610px;
+	float:right;
+	padding:120px 0 0 0;
+	margin: 0 180px 0 0;
+	text-align:right
+}
+
+#content{
+	width:610px;
+	margin:-20px auto 0 auto;
+}
+#content p{
+	margin:5px 0 10px 0
+}
+
+#content strong{
+	color:#BBDBE5;
+}
+
+#content a{
+	color:#BBDBE5;
+	}
+
+#content ul, #content li{
+	background:url('../images/bg-li.png') no-repeat 0 5px;
+	padding:0 0 0 20px
+	
+}
+
+.no-bg{
+	background:none !important
+}
+
+#content img{
+	border:10px solid #E4EAEE;
+	margin: 0 0 20px 0
+	
+}
+
+/* = footer
+---------------------------------------------------------------------------- */
+#footer{
+	color:#556573;
+	font-size:9px;
+	background:url('../images/bg-footer2.jpg') no-repeat top center;
+	line-height:140%;
+	padding:10px 0 0 0;
+	margin:20px 0 0 0
+}
+
+#footer a{
+	color:#556573;
+	}
+
+#copyright{
+	float:left;
+}
+
+#blog{
+	float:right
+}
+
+
+/* = other
+---------------------------------------------------------------------------- */
+
+.clear {
+	height:1px;
+	clear:both;
+	text-indent:-2000px;
+}
+
+.line{
+	height:12px;
+	background:url('../images/bg-hr2.jpg') no-repeat ;
+	text-indent:-20000px;
+	margin:10px 0
+}
+
+
+
+
+
+
